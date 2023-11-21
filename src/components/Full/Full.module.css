@@ -1,0 +1,8 @@
+.Full {
+  display: flex;
+  height: -webkit-fill-available;
+  height: 100vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background: #0000000f;
+}

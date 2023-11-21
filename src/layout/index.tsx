@@ -7,6 +7,7 @@ import Startup from "./struct/Startup/Startup";
 
 import Popout from "layout/popout";
 import Modal from "layout/modal";
+import Game from "./struct/Game/Game";
 
 interface Layout extends HTMLAttributes<HTMLDivElement> { };
 
@@ -22,7 +23,10 @@ const Layout: FC<Layout> = (props) => {
       popout={<Popout />}
       modal={<Modal />}
     >
+
       <Startup nav={"startup"} />
+      <Game nav={"game"} />
+
     </Root>
   )
 

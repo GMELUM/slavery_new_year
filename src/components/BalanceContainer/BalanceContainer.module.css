@@ -1,0 +1,15 @@
+.BalanceContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.BalanceContainer__inner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 24px 12px;
+  box-sizing: border-box;
+}

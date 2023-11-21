@@ -1,0 +1,16 @@
+.Centered {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Centered__inner {
+  display: flex;
+  width: 100%;
+  max-width: 560px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}

@@ -14,7 +14,9 @@
     "resolveJsonModule": true
   },
   "types": [
-    "../src/**/*.d.ts"
+    "../src/**/*.d.ts",
+    "vite-plugin-svgr/client",
+    // "vite/client"
   ],
   "include": [
     "../src",

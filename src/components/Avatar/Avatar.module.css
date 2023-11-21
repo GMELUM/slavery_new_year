@@ -1,0 +1,24 @@
+.Avatar {
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.Avatar--size-x {
+  width: 62px;
+  height: 62px;
+}
+
+.Avatar--size-l {
+  width: 48px;
+  height: 48px;
+}
+
+.Avatar--size-s {
+  width: 34px;
+  height: 34px;
+}
+
+.Avatar--size-auto {
+  width: 100%;
+  height: 100%;
+}
