@@ -17,6 +17,7 @@ export { default as Centered } from "./Centered/Centered";
 export { default as Snowfall } from "./Snowfall/Snowfall";
 export { default as Currency } from "./Currency/Currency";
 export { default as BalanceContainer } from "./BalanceContainer/BalanceContainer";
+export { default as Snow } from "./Snow/Snow";
 
 export { default as Popout } from './Popout/Popout';
 

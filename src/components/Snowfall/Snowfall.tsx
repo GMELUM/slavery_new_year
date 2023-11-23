@@ -42,6 +42,9 @@ const Snowfall: React.FC = () => {
           if (timestamp - lastFrameTime > frameInterval) {
             lastFrameTime = timestamp;
 
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+
             ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
             snowflakes.forEach((flake) => {

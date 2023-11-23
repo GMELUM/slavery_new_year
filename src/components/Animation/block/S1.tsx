@@ -5,7 +5,7 @@ import style from "../symbol/symbol.module.css";
 interface S1 extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
   star?: boolean;
-  toys?: number[];
+  toys?: (number | undefined | null)[];
 };
 
 const S1: FC<S1> = ({

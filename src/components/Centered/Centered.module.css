@@ -5,6 +5,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  z-index: 4;
 }
 
 .Centered__inner {

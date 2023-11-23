@@ -4,6 +4,9 @@ import { DATA, Data } from "engine/state/atoms";
 const loadData = () => new Promise<Data>((resolve) => {
   setTimeout(() => resolve({
     ...getter(DATA),
+    cone: 24,
+    elf: 10,
+    snowflake: 112,
     rating: [
       {
         name: "Алла Проценко",
@@ -53,7 +56,12 @@ const loadData = () => new Promise<Data>((resolve) => {
         count: 1700,
         link: "https://vk.com/neprezentabelnaya_glista"
       }
-    ]
+    ],
+    decorations: {
+      garland: "snow",
+      star: true,
+      toys: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    }
   }))
 })
 

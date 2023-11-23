@@ -4,7 +4,7 @@ import style from "../symbol/symbol.module.css";
 
 interface S3 extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
-  toys?: number[];
+  toys?: (number | undefined | null)[];
 };
 
 const S3: FC<S3> = ({

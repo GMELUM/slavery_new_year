@@ -22,6 +22,7 @@
 }
 
 .Currency__count {
+  display: flex;
   position: relative;
   min-width: 30px;
   height: 22px;
@@ -41,10 +42,10 @@
 }
 
 .Currency__count span {
-  display: block;
+  display: flex;
   background: #1a2a58;
   color: white;
-  width: 100%;
+  flex: 1 1;
   height: 100%;
   box-sizing: border-box;
   font-size: 14px;
@@ -63,8 +64,6 @@
   border: 2px solid #101a37;
   background: #101a37;
 }
-
-
 
 .Currency--size_3.Currency--left::before,
 .Currency--size_3.Currency--right::before,
@@ -123,4 +122,41 @@
 .Currency--left .Currency__count span {
   border-radius: 0 30px 30px 0;
   padding: 4px 14px 4px 18px;
+}
+
+.Currency__button {
+  display: flex;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-color: #ffcb46;
+  border-radius: 50%;
+}
+
+.Currency__button div:first-child {
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 6px;
+  right: 6px;
+  background-color: black;
+}
+
+.Currency__button div:last-child {
+  display: block;
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 10px;
+  right: 10px;
+  background-color: black;
+}
+
+.Currency._hover .Currency__button {
+  background-color: #fcc63d;
+}
+
+.Currency._active .Currency__button {
+  background-color: #f9c235;
 }

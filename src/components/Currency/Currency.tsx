@@ -12,6 +12,7 @@ import {
 
 import style from "./Currency.module.css";
 import { classes } from "engine";
+import Events from "components/Events/Events";
 
 interface ICurrency extends HTMLAttributes<HTMLDivElement> {
   position: "left" | "right";
@@ -25,6 +26,7 @@ const Currency: FC<ICurrency> = ({
   type = "cone",
   value,
   size = 3,
+  onClick,
   ...prevProps
 }) => {
 
@@ -43,6 +45,13 @@ const Currency: FC<ICurrency> = ({
           {type === "elf" && <Elf width={iconSize} height={iconSize} />}
         </div>
         <div className={style["Currency__count"]}>
+          {onClick && <Events
+            className={style["Currency__button"]}
+            onClick={onClick}
+          >
+            <div />
+            <div />
+          </Events>}
           <span>{value}</span>
         </div>
       </div>

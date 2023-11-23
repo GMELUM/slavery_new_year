@@ -1,30 +1,20 @@
 import { FC, HTMLAttributes } from "react";
-import { Animation, Currency } from "components";
+import { Animation } from "components";
+import { useGlobalValue } from "elum-state/react";
+import { DATA } from "engine/state/atoms";
 
 interface Tree extends HTMLAttributes<HTMLDivElement> { };
-
-const testValue = {
-  garland: "snow",
-  star: true,
-  toys: [6, 2, 2, 4, 5, 5, 5, 1, 1]
-} as {
-  garland?: "led" | "snow";
-  star?: boolean;
-  toys?: number[];
-}
 
 const Tree: FC<Tree> = ({
   children
 }) => {
+  const value = useGlobalValue(DATA)
   return (
-    <>
-      {children}
-      <Animation
-        garland={testValue.garland}
-        star={testValue.star}
-        toys={testValue.toys}
-      />
-    </>
+    <Animation
+      garland={value.decorations.garland}
+      star={value.decorations.star}
+      toys={value.decorations.toys}
+    />
   )
 }
 

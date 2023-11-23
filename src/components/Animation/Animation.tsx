@@ -38,7 +38,7 @@ import Snowfall from "components/Snowfall/Snowfall";
 interface IAnimation extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
   star?: boolean;
-  toys?: number[];
+  toys?: (number | undefined | null)[];
 };
 
 const Animation: FC<IAnimation> = ({
@@ -93,7 +93,7 @@ const Animation: FC<IAnimation> = ({
 
               </defs>
 
-              <use width="2225.87" height="808.56" transform="translate(-593.14 954.31)" xlinkHref="#snow_background" />
+              <use width="2226" height="2394.45" transform="translate(-1523.9 929.29) scale(2 1)" xlinkHref="#snow_background" />
 
               <use className={style["segment_cloud"]} width="1561.19" height="456.24" xlinkHref="#cloud" />
 
