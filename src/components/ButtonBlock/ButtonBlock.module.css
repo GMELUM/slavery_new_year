@@ -1,7 +1,7 @@
 .ButtonBlock {
   display: flex;
-  height: 100px;
   justify-content: center;
+  padding: 0 24px 12px 24px;
 }
 
 .ButtonBlock__inner {
@@ -10,4 +10,10 @@
   max-width: 350px;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ButtonBlock__inner button:first-child {
+  margin-right: 12px;
 }

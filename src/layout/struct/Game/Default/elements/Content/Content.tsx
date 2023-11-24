@@ -8,6 +8,10 @@ import Full from "components/Full/Full";
 import Balance from "./elements/Balance/Balance";
 import ProgressBar from "./elements/ProgressBar/ProgressBar";
 import Action from "./elements/Action/Action";
+import Top from "./elements/Top/Top";
+import Shop from "./elements/Shop/Shop";
+import Tasks from "./elements/Tasks/Tasks";
+import Stock from "./elements/Stock/Stock";
 
 interface Content extends HTMLAttributes<HTMLDivElement> { };
 
@@ -20,14 +24,18 @@ const Content: FC<Content> = () => {
         <Rating />
         <Balance />
         <Tree />
+
+
         <ProgressBar />
         <Action />
+
       </Full>
 
       <Snow>
-        <div style={{
-          height: "1000px"
-        }} />
+        <Tasks />
+        <Shop />
+        <Stock />
+        <Top />
       </Snow>
 
     </div>

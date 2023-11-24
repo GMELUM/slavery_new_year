@@ -1,0 +1,35 @@
+.GroupHeader {
+  padding: 12px;
+}
+
+.GroupHeader__outer {
+  position: relative;
+  border-radius: 60px;
+  padding: 8px;
+}
+
+.GroupHeader__inner {
+  display: flex;
+  padding: 8px 16px;
+  border: 2px dashed white;
+  border-radius: 60px;
+  font-size: 18pt;
+  font-weight: 700;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.GroupHeader__title {
+  flex: 1 1;
+  color: white;
+  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
+}
+
+.GroupHeader__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  transform: scale(1.5);
+}

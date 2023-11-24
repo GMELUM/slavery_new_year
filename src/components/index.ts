@@ -18,6 +18,11 @@ export { default as Snowfall } from "./Snowfall/Snowfall";
 export { default as Currency } from "./Currency/Currency";
 export { default as BalanceContainer } from "./BalanceContainer/BalanceContainer";
 export { default as Snow } from "./Snow/Snow";
+export { default as Button } from "./Button/Button";
+export { default as Div } from "./Div/Div";
+export { default as RatingItem } from "./RatingItem/RatingItem";
+export { default as GroupHeader } from "./GroupHeader/GroupHeader";
+export { default as Canvas } from "./Canvas/Canvas";
 
 export { default as Popout } from './Popout/Popout';
 
