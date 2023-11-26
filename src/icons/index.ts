@@ -18,3 +18,5 @@ export { default as Jam } from "./shop/jam.svg?react";
 export { default as Smile1 } from "./shop/smile_1.svg?react";
 export { default as Smile2 } from "./shop/smile_2.svg?react";
 export { default as Smile3 } from "./shop/smile_3.svg?react";
+
+export { default as ModalSnow } from "./modalSnow.svg?react";

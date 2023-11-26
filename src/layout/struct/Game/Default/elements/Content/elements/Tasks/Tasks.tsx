@@ -1,4 +1,4 @@
-import { Button, Div, GroupHeader, Text } from "components";
+import { Button, Div, GroupHeader, Item, Text } from "components";
 import { backPage, nextPage } from "elum-router/react";
 import { useGlobalValue } from "elum-state/react";
 // import { Assets } from "engine";
@@ -7,6 +7,7 @@ import { DATA } from "engine/state/atoms";
 import { FC, HTMLAttributes, useMemo } from "react";
 
 import { Tasks as TasksIcon } from "icons"
+import executeTask from "handlers/executeStock";
 
 interface Tasks extends HTMLAttributes<HTMLDivElement> { };
 
@@ -21,25 +22,29 @@ const Tasks: FC<Tasks> = () => {
 
   const value = useGlobalValue(DATA);
 
-  // const icon = useMemo(() => <Assets group={"game"} code={"candy"} style={{
-  //   height: "20px",
-  //   padding: "0 6px"
-  // }} />, [])
-
-  // const handlerTask = async (type: string) => {
-  //   nextPage({ popout: "loading", freeze: true });
-  //   const result = await executeTask(type);
-  //   backPage({ ignoreFreeze: true, toStay: "game" })
-  // }
+  const handlerTask = async (type: string) => {
+    nextPage({ popout: "loading", freeze: true });
+    const result = await executeTask(type);
+    backPage({ ignoreFreeze: true, toStay: "game" })
+  }
 
   return (
     <Div>
-      
+
       <GroupHeader
         title="Задания"
         color="#1a5cff"
         icon={<TasksIcon />}
       />
+
+      {value.tasks && value.tasks.map((elem) => (
+        <Item
+          key={elem.key}
+          title={elem.title}
+          count={elem.count}
+          onClick={() => handlerTask(elem.key)}
+        />
+      ))}
 
       {/* <Blurred id={"task"}>
         <Text

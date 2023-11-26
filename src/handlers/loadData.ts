@@ -7,6 +7,77 @@ const loadData = () => new Promise<Data>((resolve) => {
     cone: 24,
     elf: 10,
     snowflake: 112,
+    notification: true,
+    shop: [
+      {
+        type: "box_1",
+        price: 99,
+        title: "Маленький набор",
+        isOver: false
+      },
+      {
+        type: "box_2",
+        price: 249,
+        title: "Средний набор",
+        isOver: false
+      },
+      {
+        type: "box_3",
+        price: 999,
+        title: "Большой набор",
+        isOver: false
+      },
+      {
+        type: "smile_1",
+        price: 99,
+        title: "Смайлик к имени 1",
+        isOver: false
+      },
+      {
+        type: "smile_2",
+        price: 99,
+        title: "Смайлик к имени 2",
+        isOver: false
+      },
+      {
+        type: "smile_3",
+        price: 99,
+        title: "Смайлик к имени 3",
+        isOver: false
+      },
+      {
+        type: "gingerbread",
+        price: 999,
+        title: "Пряник",
+        isOver: false
+      },
+      {
+        type: "frame",
+        price: 999,
+        title: "Рамка для профиля",
+        isOver: false
+      },
+      {
+        type: "jam",
+        price: 279,
+        title: "Земляничное варенье",
+        isOver: false
+      }
+    ],
+    stock: [
+      {
+        type: "box_1",
+        count: 10
+      },
+      {
+        type: "box_2",
+        count: 6
+      },
+      {
+        type: "box_3",
+        count: 4
+      }
+    ],
     rating: [
       {
         name: "Алла Проценко",
@@ -57,10 +128,43 @@ const loadData = () => new Promise<Data>((resolve) => {
         link: "https://vk.com/neprezentabelnaya_glista"
       }
     ],
+    tasks: [
+      {
+        key: "buy_slave",
+        title: "Купить 5 рабов",
+        count: 1
+      },
+      {
+        key: "collect_coins",
+        title: "Собрать монеты",
+        count: 1
+      },
+      {
+        key: "show_adds",
+        title: "Посмотреть рекламу",
+        badge: "до 5 раз в день",
+        count: 1
+      },
+      {
+        key: "refferal",
+        title: "Пригласить друга в игру",
+        count: 2
+      },
+      {
+        key: "promo",
+        title: "Промокод на",
+        count: 1
+      },
+      {
+        key: "tasks",
+        title: "Выполняй цели - до ",
+        count: 1000
+      }
+    ],
     decorations: {
       garland: "snow",
       star: true,
-      toys: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      toys: [10, 11, 12, 13, 14, 15, 16, 17, 18]
     }
   }))
 })

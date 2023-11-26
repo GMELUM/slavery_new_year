@@ -13,16 +13,16 @@ const ProgressBar: FC<ProgressBar> = () => {
     console.log("click")
   }
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(30);
 
-  useEffect(() => {
-    setInterval(() => {
-      setCount(i => {
-        if (i >= 100) { return 0 }
-        return i + 1
-      })
-    }, 250)
-  }, [])
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setCount(i => {
+  //       if (i >= 100) { return 0 }
+  //       return i + 1
+  //     })
+  //   }, 250)
+  // }, [])
 
   return (
     <Centered>

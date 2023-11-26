@@ -3,6 +3,7 @@ import { FC, HTMLAttributes, memo } from 'react';
 
 import { Popout } from "components";
 import { backPage, useRouter } from 'elum-router/react';
+import Loading from './Loading/Loading';
 
 interface Popouts extends HTMLAttributes<HTMLDivElement> { };
 
@@ -21,7 +22,7 @@ const Popouts: FC<Popouts> = ({ }) => {
       onClose={handlerClose}
     >
 
-      {/* <Loading nav={"loading"} /> */}
+      <Loading nav={"loading"} />
 
     </Popout>
   )

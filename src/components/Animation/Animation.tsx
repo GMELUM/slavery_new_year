@@ -20,6 +20,7 @@ import Toy6 from "./symbol/Toy6";
 import Toy7 from "./symbol/Toy7";
 import Toy8 from "./symbol/Toy8";
 import Toy9 from "./symbol/Toy9";
+import Toys from "./symbol/Toys";
 import Segment0 from "./symbol/Segment0";
 import Segment3 from "./symbol/Segment3";
 import Segment4 from "./symbol/Segment4";
@@ -80,6 +81,8 @@ const Animation: FC<IAnimation> = ({
                 <Toy7 />
                 <Toy8 />
                 <Toy9 />
+
+                <Toys />
 
                 <S1 garland={garland} star={star} toys={toys} />
                 <S2 garland={garland} toys={toys} />

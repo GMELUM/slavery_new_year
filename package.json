@@ -7,12 +7,17 @@
     "deploy": "git subtree push --prefix builds https://github.com/elum-static/helloween gh-pages"
   },
   "dependencies": {
+    "@react-three/drei": "^9.88.17",
+    "@react-three/fiber": "^8.15.11",
+    "@types/three": "^0.158.3",
     "@vkontakte/vk-bridge": "^2.11.2",
     "elum-router": "^0.0.17",
     "elum-state": "^0.7.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-copy": "^3.5.0"
+    "react-three-fiber": "^6.0.13",
+    "rollup-plugin-copy": "^3.5.0",
+    "three": "^0.158.0"
   },
   "devDependencies": {
     "@andylacko/vite-svg-react-loader": "^3.0.16",

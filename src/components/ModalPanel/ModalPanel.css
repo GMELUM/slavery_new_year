@@ -16,7 +16,7 @@
   flex: 1 1;
   flex-direction: column-reverse;
   flex-wrap: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   align-items: center;
 }
 
@@ -59,7 +59,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   cursor: default;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 999;
 }
 
@@ -111,13 +111,15 @@
   display: block;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .ModalPanel__after {
   display: flex;
   width: 100%;
+  max-width: 370px;
   height: 100vh;
+  margin: 0 auto;
   background-color: #ffffff;
 }
 

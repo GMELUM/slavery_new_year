@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-79.8" x2="-42.5" y1="109.3" y2="109.3"
+      gradientTransform="rotate(2 1490 5567)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c91a12" />
+      <stop offset=".3" stop-color="#cc1b13" />
+      <stop offset=".6" stop-color="#d71d15" />
+      <stop offset=".9" stop-color="#e82118" />
+      <stop offset="1" stop-color="#f0231a" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-139.6" x2="-47.9" y1="81.8" y2="81.8"
+      gradientTransform="translate(245)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0231a" />
+      <stop offset=".4" stop-color="#fa241b" />
+      <stop offset="1" stop-color="#fd251c" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-34.2" x2=".7" y1="125.2" y2="125.2"
+      gradientTransform="rotate(2 1490 5567)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0231a" />
+      <stop offset=".1" stop-color="#e82118" />
+      <stop offset=".4" stop-color="#d71d15" />
+      <stop offset=".7" stop-color="#cc1b13" />
+      <stop offset="1" stop-color="#c91a12" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="-80.8" x2="-42.5" y1="105.5" y2="105.5"
+      gradientTransform="rotate(2 1490 5567)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fd251c" />
+      <stop offset=".6" stop-color="#fa241b" />
+      <stop offset="1" stop-color="#f0231a" />
+    </linearGradient>
+    <linearGradient xlink:href="#linear-gradient-2" id="linear-gradient-5" x1="-163.7" x2="-157.4"
+      y1="18.9" y2="57.7" gradientTransform="rotate(-2 1419 -7315)" />
+    <linearGradient xlink:href="#linear-gradient-2" id="linear-gradient-6" x1="-34" x2="3.9"
+      y1="117.9" y2="117.9" gradientTransform="rotate(2 1490 5567)" />
+    <linearGradient id="linear-gradient-7" x1="-34" x2="3.9" y1="117.9" y2="117.9"
+      gradientTransform="rotate(2 1490 5567)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" />
+      <stop offset=".1" stop-color="#030202" />
+      <stop offset=".2" stop-color="#0d0909" />
+      <stop offset=".3" stop-color="#1e1414" />
+      <stop offset=".3" stop-color="#352423" />
+      <stop offset=".4" stop-color="#533937" />
+      <stop offset=".5" stop-color="#78524f" />
+      <stop offset=".5" stop-color="#9d6b68" />
+      <stop offset="1" />
+    </linearGradient>
+    <linearGradient xlink:href="#linear-gradient-2" id="linear-gradient-8" x1="-42.2" x2="-81.7"
+      y1="126.6" y2="142.4" gradientTransform="rotate(2 1490 5567)" />
+    <linearGradient id="linear-gradient-9" x1="-46" x2="-32.6" y1="123.2" y2="123.2"
+      gradientTransform="rotate(2 1490 5567)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0231a" />
+      <stop offset=".2" stop-color="#f9241b" />
+      <stop offset=".5" stop-color="#fd251c" />
+      <stop offset=".7" stop-color="#fa241b" />
+      <stop offset=".9" stop-color="#f0231a" />
+    </linearGradient>
+    <style>
+      .cls-3{fill:#df48ff}.cls-7{fill:#f9241b}.cls-9{fill:#ff532f}.cls-10,.cls-12{fill:#ceae14;mix-blend-mode:multiply}.cls-12{fill:#0000002e}</style>
+  </defs>
+  <g style="isolation:isolate">
+    <g id="Слой_2" data-name="Слой 2">
+      <g id="Слой_30" data-name="Слой 30">
+        <g id="box_3">
+          <path fill="none" d="M0 0h300v300H0z" />
+          <path d="m79 104-1 131 68 35V129l-67-25z" fill="#df48ff" />
+          <path fill="#ca44ea" d="m145 128 70-21-4 131-65 32-1-142z" />
+          <path fill="#485900"
+            d="m215 107-1 41c-2-5-4-17-11-20-13-5-54 13-57 14-14-11-56-27-68-31v-5l68 24Z"
+            opacity=".1" />
+          <path fill="#de57ff" d="m76 105 70 25V99L76 75v30z" />
+          <path d="m146 99 71-22v30l-71 23Z" fill="#df48ff" />
+          <path d="m99 83 1 164 10 5 1-165-12-4zM178 89l2 164 9-4 1-164-12 4z" fill="#f9241b" />
+          <path fill="#e888ff" d="m76 75 70-17 71 19-71 22-70-24z" />
+          <path d="m111 87 76-18-15-4-73 18 12 4z" class="cls-9" />
+          <path d="m178 89-66-23 12-3 66 22-12 4z" class="cls-9" />
+          <path d="M144 81s-6 32 10 38c4 2 10 3 16-2 0 0-20-12-21-35 0 0-5-8-5-1Z" fill="#0000002e" />
+          <path d="M106 98c3 1 25 3 38-18l-4-3s-19 12-35 5c0 0-7 11 1 16Z" fill="#0000002e" />
+          <path fill="#bdeaf0" d="m146 72 14 4h1l-14-4Z" style="mix-blend-mode:multiply" />
+          <path d="M139 76c-13-3-21-6-26-9l17-5 13 10c-3 6-4 4-4 4Z" fill="#0000002e" />
+          <path fill="url(#linear-gradient)"
+            d="M106 55s5 13 33 20c0 0 1 1 4-5 0 0-23-17-27-25 0 0-11 1-10 10Z" />
+          <path fill="#ade5ec" d="M189 69c1 4-2 11-4 14l-24-7c12-1 28-7 28-7Z"
+            style="mix-blend-mode:multiply" />
+          <path fill="url(#linear-gradient-2)"
+            d="M183 85c-9 7-34-5-34-5 0-4 3-3 3-3a35 35 0 0 0 9-1l24 7a10 10 0 0 1-2 2Z" />
+          <path d="M183 85c-9 7-34-5-34-5 0-4 3-3 3-3a35 35 0 0 0 9-1l24 7a10 10 0 0 1-2 2Z"
+            fill="#0000002e" />
+          <path fill="url(#linear-gradient-3)"
+            d="M151 80s24 10 33 2c0 0 4-7 1-11 0 0-20 6-32 4 0 0-3 0-2 5Z" />
+          <path fill="url(#linear-gradient-4)"
+            d="M140 74s-10-23-21-26c-9-2-13 2-13 7 0 0-4-9 4-15s32 5 33 31Z" />
+          <path fill="url(#linear-gradient-5)"
+            d="M145 81s-6 28 9 36c0 0 10 3 16 0 0 0-19-13-20-37 0 0-7-6-5 1Z" />
+          <path fill="url(#linear-gradient-6)"
+            d="M151 78s15-12 25-9 9 10 8 13c0 0 7-7 5-14s-18-18-38 4Z" />
+          <path d="M151 72v6l2-2v-5l-2 1Z" fill="#0000002e" />
+          <path fill="url(#linear-gradient-7)"
+            d="M151 78s15-12 25-9 9 10 8 13c0 0 7-7 5-14s-18-18-38 4Z" opacity=".2"
+            style="mix-blend-mode:screen" />
+          <path d="M151 88a45 45 0 0 1-1-8s-7-6-5 1a63 63 0 0 0-1 7 7 7 0 0 1 7 0Z" fill="#0000002e" />
+          <path fill="url(#linear-gradient-8)" d="M106 96s22 3 38-17l-4-4s-19 14-35 7c0 0-6 8 1 14Z" />
+          <path d="M152 74s7-8 9-7-6 4-9 7ZM152 75s4-4 5-3-4 2-5 3ZM142 70s-1-11-4-11 3 7 4 11Z"
+            fill="#0000002e" />
+          <path
+            d="M142 71s-2-6-3-5 2 3 3 5ZM144 79l-4-4a60 60 0 0 1-8 5c5 1 4 6 4 7a50 50 0 0 0 8-8Z"
+            fill="#0000002e" />
+          <path d="m140 74 3-4-1-3a4 4 0 0 0-3 3l1 4Z" fill="#0000002e" />
+          <path fill="url(#linear-gradient-9)"
+            d="M139 75c0 2 3 6 6 5s5 1 6 0 5-10-4-11c-6-1-7 1-8 6Z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

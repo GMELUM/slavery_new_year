@@ -5,17 +5,20 @@ import classes from "engine/libs/classes";
 import clamp from "engine/libs/clamp";
 
 import "./ModalPanel.css";
+import { ModalSnow } from "icons";
 
 interface ModalPanel extends Omit<HTMLAttributes<HTMLDivElement>, "onClick"> {
   onClick?: () => void;
   mode?: "panel" | "card";
   color?: string;
+  snow?: boolean;
 };
 
 const ModalPanel: FC<ModalPanel> = ({
   onClick,
   children,
   color,
+  snow,
   mode = "panel"
 }) => {
 
@@ -51,7 +54,6 @@ const ModalPanel: FC<ModalPanel> = ({
     const clampTop = element.clientHeight - target.parentElement.clientHeight;
 
     if (value > 0) {
-      console.log(value)
       setStore({
         anim: store.anim,
         among: clamp(value, 0, (target.parentElement.clientHeight - (safe.bottom + 44)))
@@ -65,12 +67,11 @@ const ModalPanel: FC<ModalPanel> = ({
       })
     }
 
-    console.log(store.among)
   }
 
   const End = (event: GestureEvent) => {
 
-    if (store.among > 50) {
+    if (store.among > 50 || store.among === 24) {
       onClick && onClick();
       return;
     }
@@ -98,6 +99,7 @@ const ModalPanel: FC<ModalPanel> = ({
         ref={container}
         className={"ModalPanel__inner"}
       >
+
         <div
           className={"ModalPanel__content"}
           style={{
@@ -120,7 +122,11 @@ const ModalPanel: FC<ModalPanel> = ({
               e.stopPropagation();
             }}
           >
-            <div />
+            {!snow && <ModalSnow width={"100%"} style={{
+              position: "absolute",
+              top: "-30px"
+            }} />}
+            {snow && <div />}
           </Touch>
 
           <div
@@ -136,7 +142,10 @@ const ModalPanel: FC<ModalPanel> = ({
         <div className={"ModalPanel__background"}>
           <div
             className={"ModalPanel__after"}
-            style={{ transform: `translateY(${(store.among - 2)}px)` }}
+            style={{
+              transform: `translateY(${(store.among - 2)}px)`,
+              backgroundColor: color || "white"
+            }}
           />
         </div>
 

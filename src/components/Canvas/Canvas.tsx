@@ -59,8 +59,6 @@ const Canvas: FC<ICanvas> = ({
         localCanvas.height = height;
         const next = () => {
 
-
-
           if (unmout) { return; }
 
           const now = Date.now();
@@ -81,7 +79,6 @@ const Canvas: FC<ICanvas> = ({
               onRender({ width, height, quality, context, next });
             } catch (error) { console.log(error); next(); }
           });
-          // } else { timer = setTimeout(() => { next(); }, (1000 / limitFrames) - diff) };
         }
 
         const render = onInitial || onRender;
