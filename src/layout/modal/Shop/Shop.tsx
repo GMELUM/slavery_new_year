@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from "react";
-import { Div, ModalPanel } from "components";
+import { Badge, Card, CardContainer, Div, ModalPanel } from "components";
 
 import { useGlobalValue } from "elum-state/react";
 import { DATA } from "engine/state/atoms";
@@ -27,11 +27,35 @@ const Shop: FC<Shop> = () => {
   return (
     <ModalPanel onClick={handlerClose} color={"#d8eaff"}>
       <Div
-        top={"12px"}
-        right={"12px"}
+        top={"32px"}
+        // right={"12px"}
         bottom={"12px"}
-        left={"12px"}
+        // left={"12px"}
       >
+
+        {value.toyShop && value.toyShop.map((group) => (
+          <>
+            <Badge
+
+              title={`${group.level} уровень`}
+              description={group.description}
+            />
+            <CardContainer>
+              {group.items.map((elem) => (
+                <Card
+                  key={`shop_${elem.toy}`}
+                  // title={elem.title}
+                  image={`toy_${elem.toy}` as any}
+                  vote={elem.price}
+
+                // onClick={() => handlerGoods(elem.type)}
+                />
+              ))}
+            </CardContainer>
+          </>
+        ))}
+
+
         {/* <div className={style.Container}>
           {value.shopVote && value.shopVote.map((elem) => (
             <ProductCard

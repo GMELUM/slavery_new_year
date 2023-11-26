@@ -21,7 +21,7 @@ const Startup: FC<Startup> = ({
     const value = await loadData();
     setter(DATA, value);
 
-    nextPage({ view: "game" })
+    nextPage({ view: "game", stay: "game", freeze: true })
 
   }
 

@@ -56,14 +56,14 @@ const ModalPanel: FC<ModalPanel> = ({
     if (value > 0) {
       setStore({
         anim: store.anim,
-        among: clamp(value, 0, (target.parentElement.clientHeight - (safe.bottom + 44)))
+        among: clamp(value, 0, (target.parentElement.clientHeight - (safe.bottom)))
       })
     }
 
     if (value < 0) {
       setStore({
         anim: store.anim,
-        among: clamp(value / 4, -clampTop + (safe.bottom + 44), 0)
+        among: clamp(value / 4, -clampTop + (safe.bottom), 0)
       })
     }
 
@@ -104,7 +104,7 @@ const ModalPanel: FC<ModalPanel> = ({
           className={"ModalPanel__content"}
           style={{
             transform: `translateY(${(store.among)}px)`,
-            background: color || "white"
+            background: "transparent"
           }}
           onClick={(e) => {
             e.preventDefault();
@@ -122,18 +122,20 @@ const ModalPanel: FC<ModalPanel> = ({
               e.stopPropagation();
             }}
           >
-            {!snow && <ModalSnow width={"100%"} style={{
+            <ModalSnow width={"100%"} style={{
               position: "absolute",
-              top: "-30px"
-            }} />}
-            {snow && <div />}
+              top: "0"
+            }} />
+            {/* {snow && <div />} */}
           </Touch>
 
           <div
             className={"ModalPanel__children"}
             onClick={resetTouches}
           >
-            <div className={"ModalPanel__scroll"}>
+            <div className={"ModalPanel__scroll"} style={{
+              background: color || "white"
+            }}>
               {children}
             </div>
           </div>

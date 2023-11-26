@@ -8,6 +8,7 @@
   flex-direction: column;
   cursor: pointer;
   z-index: 999999;
+  transform: translateZ(1);
 }
 
 .ModalPanel__inner {
@@ -16,7 +17,7 @@
   flex: 1 1;
   flex-direction: column-reverse;
   flex-wrap: nowrap;
-  /* overflow: hidden; */
+  overflow: hidden;
   align-items: center;
 }
 
@@ -59,7 +60,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   cursor: default;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 999;
 }
 
@@ -82,7 +83,7 @@
 .ModalPanel__children {
   position: relative;
   overflow: hidden;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .ModalPanel--animation .ModalPanel__content {
@@ -90,15 +91,15 @@
 }
 
 .ModalPanel__scroll {
-  overflow: scroll;
-  overflow-y: auto;
+  overflow-y: scroll;
+  /* overflow-y: auto; */
   overflow-x: hidden;
   height: 100%;
 }
 
-.ModalPanel__scroll * {
+/* .ModalPanel__scroll * {
   pointer-events: all;
-}
+} */
 
 .ModalPanel__background {
   position: absolute;
@@ -111,18 +112,27 @@
   display: block;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .ModalPanel__after {
   display: flex;
   width: 100%;
-  max-width: 370px;
   height: 100vh;
-  margin: 0 auto;
   background-color: #ffffff;
 }
 
 .ModalPanel--animation .ModalPanel__after {
   transition: .24s;
+}
+
+.ModalPanel__header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 0 0;
+  z-index: 99;
+  transform: translateZ(10px);
 }

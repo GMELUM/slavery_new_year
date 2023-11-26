@@ -48,6 +48,16 @@ export type Task = {
 }
 export type Tasks = Task[];
 
+export type Toy = {
+  toy: number;
+  price: number;
+}
+export type ListToy = Array<{
+  level: number;
+  description: string;
+  items: Array<Toy>
+}>
+
 export type Data = {
   cone: number;
   elf: number;
@@ -59,6 +69,7 @@ export type Data = {
   rating: RatingList;
   shop?: ShopList;
   stock?: StockList;
+  toyShop: ListToy;
   decorations: Decorations;
 }
 
@@ -73,6 +84,7 @@ export const DATA = atom<Data>({
 
     tasks: [],
     rating: [],
+    toyShop: [],
     decorations: {
       garland: undefined,
       star: false,

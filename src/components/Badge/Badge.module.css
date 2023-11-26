@@ -1,0 +1,32 @@
+.Badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Badge__outer {
+  background: #fff;
+  padding: 6px;
+  border-radius: 60px;
+}
+
+.Badge__inner {
+  display: flex;
+  border: 2px dashed rgb(216, 216, 216);
+  padding: 4px 16px;
+  border-radius: 60px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Badge__inner span:first-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.Badge__inner span:last-child {
+  font-size: 12px;
+  font-weight: 700;
+  color: #858585;
+}

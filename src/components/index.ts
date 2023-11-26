@@ -24,6 +24,7 @@ export { default as RatingItem } from "./RatingItem/RatingItem";
 export { default as GroupHeader } from "./GroupHeader/GroupHeader";
 export { default as Canvas } from "./Canvas/Canvas";
 export { default as Notify } from "./Notify/Notify";
+export { default as Badge } from "./Badge/Badge";
 
 export { default as CardContainer } from "./CardContainer/CardContainer";
 export { default as Card } from "./Card/Card";
