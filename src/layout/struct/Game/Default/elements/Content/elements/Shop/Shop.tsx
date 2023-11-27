@@ -19,6 +19,30 @@ const Shop: FC<Shop> = () => {
     backPage({ ignoreFreeze: true, toStay: "game" })
   }
 
+  const handlerInfo = (type: string) => {
+
+    if (type.startsWith("box")) {
+      nextPage({ modal: "open_box" });
+    }
+
+    if (type.startsWith("smile")) {
+      nextPage({ modal: "smile" });
+    }
+
+    if (type.startsWith("gingerbread")) {
+      nextPage({ modal: "gingerbread" });
+    }
+
+    if (type.startsWith("frame")) {
+      nextPage({ modal: "frame" });
+    }
+
+    if (type.startsWith("jam")) {
+      nextPage({ modal: "jam" });
+    }
+
+  }
+
   return (
     <Div>
 
@@ -35,7 +59,8 @@ const Shop: FC<Shop> = () => {
             title={elem.title}
             image={elem.type}
             price={elem.price}
-            
+
+            onInfo={() => handlerInfo(elem.type)}
             onClick={() => handlerGoods(elem.type)}
           />
         )}

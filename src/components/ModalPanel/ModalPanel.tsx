@@ -91,7 +91,8 @@ const ModalPanel: FC<ModalPanel> = ({
     <div className={classes("ModalPanel", {
       "ModalPanel--animation": store.anim,
       "ModalPanel--card": mode === "card",
-      "ModalPanel--panel": mode === "panel"
+      "ModalPanel--panel": mode === "panel",
+      "ModalPanel--snow": snow === true
     })}
       onClick={handlerClose}
     >
@@ -121,12 +122,16 @@ const ModalPanel: FC<ModalPanel> = ({
               e.preventDefault();
               e.stopPropagation();
             }}
+            style={{
+              background: snow ? "transparent" : "white"
+            }}
           >
-            <ModalSnow width={"100%"} style={{
+            {snow && <ModalSnow width={"100%"} style={{
               position: "absolute",
-              top: "-5px"
-            }} />
-            {/* {snow && <div />} */}
+              top: "-5px",
+              zIndex: "999"
+            }} />}
+            {!snow && <div />}
           </Touch>
 
           <div

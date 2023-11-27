@@ -9,21 +9,15 @@ import executeStock from "handlers/executeStock";
 
 interface Stock extends HTMLAttributes<HTMLDivElement> { };
 
-const styleButton = {
-  top: "12px",
-  right: "12px",
-  bottom: "0",
-  left: "12px"
-}
-
 const Stock: FC<Stock> = () => {
 
   const value = useGlobalValue(DATA);
 
   const handlerGoods = async (type: string) => {
-    nextPage({ popout: "loading", freeze: true });
-    const result = await executeStock(type);
-    backPage({ ignoreFreeze: true, toStay: "game" })
+    // nextPage({ popout: "loading", freeze: true });
+    // const result = await executeStock(type);
+    // backPage({ ignoreFreeze: true, toStay: "game" })
+    nextPage({ modal: "open_box" })
   }
 
   return (

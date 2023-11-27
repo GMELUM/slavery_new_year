@@ -26,10 +26,10 @@ const ProgressBar: FC<ProgressBar> = () => {
 
   return (
     <Centered>
-      <Progress
+      {/* <Progress
         value={count}
         count={12}
-      />
+      /> */}
     </Centered>
   )
 }

@@ -53,9 +53,9 @@ export type Toy = {
   price: number;
 }
 export type ListToy = Array<{
-  level: number;
+  level: string;
   description: string;
-  items: Array<Toy>
+  items: Array<Toy>;
 }>
 
 export type Data = {

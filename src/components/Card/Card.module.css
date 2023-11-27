@@ -85,16 +85,31 @@
 
 .Card__vote {
   display: flex;
-  background-color: red;
+  background-color: #0077ff;
   color: white;
   height: 20px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   border-radius: 20px;
-  padding: 0 6px;
+  padding: 0 4px;
   align-items: center;
   font-size: 11px;
   font-weight: 600;
   line-height: 6px;
+}
+
+.Card__info {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a5cff;
+  color: white;
+  border-radius: 20px;
+  line-height: 10px;
 }

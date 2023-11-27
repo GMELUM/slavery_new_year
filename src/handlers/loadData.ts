@@ -163,8 +163,8 @@ const loadData = () => new Promise<Data>((resolve) => {
     ],
     toyShop: [
       {
-        level: 1,
-        description: "добавляет +1 к прогрессу ёлки",
+        level: "Обычные шарики",
+        description: "добавляет X снежинок",
         items: [
           { toy: "toy_10", price: 1 },
           { toy: "toy_11", price: 1 },
@@ -175,8 +175,8 @@ const loadData = () => new Promise<Data>((resolve) => {
         ]
       },
       {
-        level: 2,
-        description: "добавляет +2 к прогрессу ёлки",
+        level: "Звёздочки",
+        description: "добавляет X снежинок",
         items: [
           { toy: "toy_16", price: 2 },
           { toy: "toy_17", price: 2 },
@@ -187,8 +187,8 @@ const loadData = () => new Promise<Data>((resolve) => {
         ]
       },
       {
-        level: 3,
-        description: "добавляет +3 к прогрессу ёлки",
+        level: "Шарики с узорами",
+        description: "добавляет X снежинок",
         items: [
           { toy: "toy_1", price: 3 },
           { toy: "toy_2", price: 3 },
@@ -202,12 +202,18 @@ const loadData = () => new Promise<Data>((resolve) => {
         ]
       },
       {
-        level: 4,
-        description: "добавляет +4 к прогрессу ёлки",
+        level: "Герлянды",
+        description: "добавляет X снежинок",
         items: [
-          { toy: "star", price: 3 },
           { toy: "garland_1", price: 3 },
           { toy: "garland_2", price: 3 },
+        ]
+      },
+      {
+        level: "Звезда",
+        description: "добавляет X снежинок",
+        items: [
+          { toy: "star", price: 3 },
         ]
       }
     ],

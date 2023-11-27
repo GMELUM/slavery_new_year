@@ -25,7 +25,7 @@ const Shop: FC<Shop> = () => {
   }
 
   return (
-    <ModalPanel onClick={handlerClose} mode={"card"} color={"#d8eaff"}>
+    <ModalPanel snow onClick={handlerClose} mode={"card"} color={"#d8eaff"}>
       <Div
         top={"32px"}
         bottom={"12px"}
@@ -35,7 +35,7 @@ const Shop: FC<Shop> = () => {
           <Fragment key={`badge_${index}`}>
             <Badge
 
-              title={`${group.level} уровень`}
+              title={`${group.level}`}
               description={group.description}
             />
             <CardContainer>
@@ -52,19 +52,6 @@ const Shop: FC<Shop> = () => {
           </Fragment>
         ))}
 
-
-        {/* <div className={style.Container}>
-          {value.shopVote && value.shopVote.map((elem) => (
-            <ProductCard
-              key={elem.type}
-              format={elem.type === "product_5" ? "rectangle" : "square"}
-              image={<Assets group={"game"} code={elem.type} />}
-              pumpkin={elem.pumpkin}
-              candy={elem.candy}
-              onClick={() => handlerShop(elem.type)}
-            />
-          ))}
-        </div> */}
       </Div>
     </ModalPanel>
   )

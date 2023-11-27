@@ -12,6 +12,10 @@ const Action: FC<Action> = () => {
     nextPage({ modal: "shop" })
   }
 
+  const handleHelp = () => {
+    nextPage({ modal: "how_to_play" })
+  }
+
   return (
     <Centered>
       <ButtonBlock>
@@ -27,6 +31,7 @@ const Action: FC<Action> = () => {
           color={"#8cbae7"}
           mode={"blur"}
           size={"circle"}
+          onClick={handleHelp}
         >?</Button>
 
       </ButtonBlock>

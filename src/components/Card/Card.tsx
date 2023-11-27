@@ -48,7 +48,7 @@ import {
 import { decWord } from "engine";
 
 const images = {
-  
+
   "box_1": <Box1 />,
   "box_2": <Box2 />,
   "box_3": <Box3 />,
@@ -94,6 +94,7 @@ interface ICardContainer extends HTMLAttributes<HTMLDivElement> {
   title?: string;
   price?: number;
   sold?: boolean;
+  onInfo?: () => void;
 };
 
 const Card: FC<ICardContainer> = ({
@@ -103,6 +104,7 @@ const Card: FC<ICardContainer> = ({
   price,
   sold,
   vote,
+  onInfo,
   children,
   ...prevProps
 }) => {
@@ -125,6 +127,15 @@ const Card: FC<ICardContainer> = ({
     >
       <Ratio {...size}>
         <div className={style.Card__inner}>
+
+          {onInfo && <Events className={style.Card__info}
+            onClick={(e) => {
+              e.stopPropagation()
+              e.preventDefault()
+              onInfo && onInfo()
+            }}
+          >?</Events>}
+
           <div className={style.Card__image}>
             {element}
           </div>
