@@ -5,7 +5,7 @@ import style from "../symbol/symbol.module.css";
 interface S1 extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
   star?: boolean;
-  toys?: (number | undefined | null)[];
+  toys?: (string | undefined | null)[];
 };
 
 const S1: FC<S1> = ({
@@ -78,7 +78,7 @@ const S1: FC<S1> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 270.11, 393.21)"
-          xlinkHref={`#toy_${toys[0]}`} />
+          xlinkHref={"#" + toys[0]} />
       }
 
       {toys[1] &&
@@ -86,13 +86,14 @@ const S1: FC<S1> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 0, 434.33)"
-          xlinkHref={`#toy_${toys[1]}`} />
+          xlinkHref={"#" + toys[1]} />
       }
 
       {star && <use width="150" height="150" transform="matrix(0.93, 0, 0, -0.93, 115, 135)"
         xlinkHref="#star" />}
+
     </g>
   </symbol>
 )
 
-export default memo(S1);
+export default S1;

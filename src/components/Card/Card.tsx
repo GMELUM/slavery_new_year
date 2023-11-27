@@ -40,11 +40,15 @@ import {
   Toy12,
   Toy13,
   Toy14,
+  ToyStar,
+  ToyGarland1,
+  ToyGarland2,
 
 } from "icons";
 import { decWord } from "engine";
 
 const images = {
+  
   "box_1": <Box1 />,
   "box_2": <Box2 />,
   "box_3": <Box3 />,
@@ -77,10 +81,14 @@ const images = {
   "toy_20": <Toy20 />,
   "toy_21": <Toy21 />,
 
-};
+  "star": <ToyStar />,
+  "garland_1": <ToyGarland1 />,
+  "garland_2": <ToyGarland2 />
+
+} as Record<string, JSX.Element>;
 
 interface ICardContainer extends HTMLAttributes<HTMLDivElement> {
-  image: keyof typeof images;
+  image: keyof typeof images | string;
   vote?: number;
   count?: number;
   title?: string;

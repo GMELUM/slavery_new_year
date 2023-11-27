@@ -4,7 +4,7 @@ import style from "../symbol/symbol.module.css";
 
 interface S2 extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
-  toys?: (number | undefined | null)[];
+  toys?: (string | undefined | null)[];
 };
 
 const S2: FC<S2> = ({
@@ -75,11 +75,11 @@ const S2: FC<S2> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 245.16, 503.96)"
-          xlinkHref={`#toy_${toys[2]}`} />
+          xlinkHref={"#" + toys[2]} />
       }
 
     </g>
   </symbol>
 )
 
-export default memo(S2);
+export default S2;

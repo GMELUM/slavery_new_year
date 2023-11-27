@@ -4,7 +4,7 @@ import style from "../symbol/symbol.module.css";
 
 interface S4 extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
-  toys?: (number | undefined | null)[];
+  toys?: (string | undefined | null)[];
 };
 
 const S4: FC<S4> = ({
@@ -90,7 +90,7 @@ const S4: FC<S4> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 293.48, 783.24)"
-          xlinkHref={`#toy_${toys[6]}`} />
+          xlinkHref={"#" + toys[6]} />
       }
 
       {toys[7] &&
@@ -98,7 +98,7 @@ const S4: FC<S4> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 637.43, 662.67)"
-          xlinkHref={`#toy_${toys[7]}`} />
+          xlinkHref={"#" + toys[7]} />
       }
 
       {toys[8] &&
@@ -106,11 +106,11 @@ const S4: FC<S4> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 0, 700.99)"
-          xlinkHref={`#toy_${toys[8]}`} />
+          xlinkHref={"#" + toys[8]} />
       }
 
     </g>
   </symbol>
 )
 
-export default memo(S4);
+export default S4;

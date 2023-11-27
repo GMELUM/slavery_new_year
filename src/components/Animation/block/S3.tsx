@@ -4,7 +4,7 @@ import style from "../symbol/symbol.module.css";
 
 interface S3 extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
-  toys?: (number | undefined | null)[];
+  toys?: (string | undefined | null)[];
 };
 
 const S3: FC<S3> = ({
@@ -105,7 +105,7 @@ const S3: FC<S3> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 262.56, 650.37)"
-          xlinkHref={`#toy_${toys[3]}`} />
+          xlinkHref={"#" + toys[3]} />
       }
 
       {toys[4] &&
@@ -113,7 +113,7 @@ const S3: FC<S3> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 21.42, 584.95)"
-          xlinkHref={`#toy_${toys[4]}`} />
+          xlinkHref={"#" + toys[4]} />
       }
 
       {toys[5] &&
@@ -121,7 +121,7 @@ const S3: FC<S3> = ({
           width="100"
           height="100"
           transform="matrix(0.93, 0, 0, -0.93, 504.64, 542.89)"
-          xlinkHref={`#toy_${toys[5]}`} />
+          xlinkHref={"#" + toys[5]} />
       }
 
 
@@ -129,4 +129,4 @@ const S3: FC<S3> = ({
   </symbol>
 )
 
-export default memo(S3);
+export default S3;

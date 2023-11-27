@@ -42,3 +42,7 @@ export { default as Toy18 } from "./toy/toy_18.svg?react";
 export { default as Toy19 } from "./toy/toy_19.svg?react";
 export { default as Toy20 } from "./toy/toy_20.svg?react";
 export { default as Toy21 } from "./toy/toy_21.svg?react";
+
+export { default as ToyStar } from "./toy/star.svg?react";
+export { default as ToyGarland1 } from "./toy/garland_1.svg?react";
+export { default as ToyGarland2 } from "./toy/garland_2.svg?react";

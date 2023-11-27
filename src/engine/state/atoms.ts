@@ -35,9 +35,9 @@ export type Stock = {
 export type StockList = Stock[];
 
 export type Decorations = {
-  garland?: "led" | "snow";
+  garland: "led" | "snow" | string | undefined;
   star: boolean;
-  toys?: (number | undefined | null)[];
+  toys: (string | undefined | null)[];
 }
 
 export type Task = {
@@ -49,7 +49,7 @@ export type Task = {
 export type Tasks = Task[];
 
 export type Toy = {
-  toy: number;
+  toy: string;
   price: number;
 }
 export type ListToy = Array<{
@@ -88,7 +88,7 @@ export const DATA = atom<Data>({
     decorations: {
       garland: undefined,
       star: false,
-      toys: [, , , , , , , ,]
+      toys: []
     },
   }
 })

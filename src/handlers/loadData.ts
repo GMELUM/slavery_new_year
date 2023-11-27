@@ -166,46 +166,55 @@ const loadData = () => new Promise<Data>((resolve) => {
         level: 1,
         description: "добавляет +1 к прогрессу ёлки",
         items: [
-          { toy: 10, price: 1 },
-          { toy: 11, price: 1 },
-          { toy: 12, price: 1 },
-          { toy: 13, price: 1 },
-          { toy: 14, price: 1 },
-          { toy: 15, price: 1 },
+          { toy: "toy_10", price: 1 },
+          { toy: "toy_11", price: 1 },
+          { toy: "toy_12", price: 1 },
+          { toy: "toy_13", price: 1 },
+          { toy: "toy_14", price: 1 },
+          { toy: "toy_15", price: 1 },
         ]
       },
       {
         level: 2,
         description: "добавляет +2 к прогрессу ёлки",
         items: [
-          { toy: 16, price: 2 },
-          { toy: 17, price: 2 },
-          { toy: 18, price: 2 },
-          { toy: 19, price: 2 },
-          { toy: 20, price: 2 },
-          { toy: 21, price: 2 },
+          { toy: "toy_16", price: 2 },
+          { toy: "toy_17", price: 2 },
+          { toy: "toy_18", price: 2 },
+          { toy: "toy_19", price: 2 },
+          { toy: "toy_20", price: 2 },
+          { toy: "toy_21", price: 2 },
         ]
       },
       {
         level: 3,
         description: "добавляет +3 к прогрессу ёлки",
         items: [
-          { toy: 1, price: 3 },
-          { toy: 2, price: 3 },
-          { toy: 3, price: 3 },
-          { toy: 4, price: 3 },
-          { toy: 5, price: 3 },
-          { toy: 6, price: 3 },
-          { toy: 7, price: 3 },
-          { toy: 8, price: 3 },
-          { toy: 9, price: 3 },
+          { toy: "toy_1", price: 3 },
+          { toy: "toy_2", price: 3 },
+          { toy: "toy_3", price: 3 },
+          { toy: "toy_3", price: 3 },
+          { toy: "toy_5", price: 3 },
+          { toy: "toy_6", price: 3 },
+          { toy: "toy_7", price: 3 },
+          { toy: "toy_8", price: 3 },
+          { toy: "toy_9", price: 3 },
+        ]
+      },
+      {
+        level: 4,
+        description: "добавляет +4 к прогрессу ёлки",
+        items: [
+          { toy: "star", price: 3 },
+          { toy: "garland_1", price: 3 },
+          { toy: "garland_2", price: 3 },
         ]
       }
     ],
     decorations: {
-      garland: "snow",
-      star: true,
-      toys: [10, 11, 12, 13, 14, 15, 16, 17, 18]
+      garland: undefined,
+      star: false,
+      toys: []
     }
   }))
 })

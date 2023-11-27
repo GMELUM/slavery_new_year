@@ -28,9 +28,7 @@ const Shop: FC<Shop> = () => {
     <ModalPanel onClick={handlerClose} color={"#d8eaff"}>
       <Div
         top={"32px"}
-        // right={"12px"}
         bottom={"12px"}
-        // left={"12px"}
       >
 
         {value.toyShop && value.toyShop.map((group) => (
@@ -45,10 +43,10 @@ const Shop: FC<Shop> = () => {
                 <Card
                   key={`shop_${elem.toy}`}
                   // title={elem.title}
-                  image={`toy_${elem.toy}` as any}
+                  image={elem.toy}
                   vote={elem.price}
 
-                // onClick={() => handlerGoods(elem.type)}
+                  onClick={() => handlerShop(elem.toy)}
                 />
               ))}
             </CardContainer>

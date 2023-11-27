@@ -124,7 +124,7 @@ const ModalPanel: FC<ModalPanel> = ({
           >
             <ModalSnow width={"100%"} style={{
               position: "absolute",
-              top: "0"
+              top: "-5px"
             }} />
             {/* {snow && <div />} */}
           </Touch>

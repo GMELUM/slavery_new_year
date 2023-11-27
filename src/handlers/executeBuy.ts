@@ -1,48 +1,54 @@
-import { setter } from "elum-state/react";
+import { getter, setter } from "elum-state/react";
 import { DATA } from "engine/state/atoms";
+import addToy from "engine/libs/addToy";
 
 const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
   setTimeout(() => {
 
-    // if(type === "product_1") {
-    //   setter(DATA, (data) => ({
-    //     ...data,
-    //     candy: data.candy + 1,
-    //     pumpkin: data.pumpkin + 1
-    //   }))
-    // }
+    console.log(type)
 
-    // if(type === "product_2") {
-    //   setter(DATA, (data) => ({
-    //     ...data,
-    //     candy: data.candy + 2,
-    //     pumpkin: data.pumpkin + 2
-    //   }))
-    // }
+    if (type.startsWith("toy_")) {
+      setter(DATA, (data) => ({
+        ...data,
+        decorations: {
+          ...data.decorations,
+          toys: addToy(data.decorations.toys, type, 9)
+        }
+      }))
+      console.log(getter(DATA).decorations)
+    }
 
-    // if(type === "product_3") {
-    //   setter(DATA, (data) => ({
-    //     ...data,
-    //     candy: data.candy + 3,
-    //     pumpkin: data.pumpkin + 3
-    //   }))
-    // }
+    if (type.startsWith("star")) {
+      setter(DATA, (data) => ({
+        ...data,
+        decorations: {
+          ...data.decorations,
+          star: true
+        }
+      }))
+    }
 
-    // if(type === "product_4") {
-    //   setter(DATA, (data) => ({
-    //     ...data,
-    //     candy: data.candy + 4,
-    //     pumpkin: data.pumpkin + 4
-    //   }))
-    // }
+    if (type === "garland_2") {
+      console.log("Герлянда 2")
+      setter(DATA, (data) => ({
+        ...data,
+        decorations: {
+          ...data.decorations,
+          garland: "led"
+        }
+      }))
+    }
 
-    // if(type === "product_5") {
-    //   setter(DATA, (data) => ({
-    //     ...data,
-    //     candy: data.candy + 5,
-    //     pumpkin: data.pumpkin + 5
-    //   }))
-    // }
+    if (type === "garland_1") {
+      console.log("Герлянда 1")
+      setter(DATA, (data) => ({
+        ...data,
+        decorations: {
+          ...data.decorations,
+          garland: "snow"
+        }
+      }))
+    }
 
     console.log(type);
     resolve(true);

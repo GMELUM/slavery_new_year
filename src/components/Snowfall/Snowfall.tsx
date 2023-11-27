@@ -78,19 +78,18 @@ const Snowfall: React.FC = () => {
   }, []);
 
   return (
-    <></>
-    // <Canvas
-    //   quality={1}
-    //   limitFrames={30}
-    //   onRender={render}
-    //   onInitial={init}
-    //   style={{
-    //     position: "absolute",
-    //     width: "100%",
-    //     height: "100%",
-    //     zIndex: 1
-    //   }}
-    // />
+    <Canvas
+      quality={1}
+      limitFrames={30}
+      onRender={render}
+      onInitial={init}
+      style={{
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        zIndex: 1
+      }}
+    />
   )
 
 };

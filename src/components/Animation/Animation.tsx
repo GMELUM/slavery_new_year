@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes, useMemo } from "react";
 import AspectRation from "components/AspectRation/AspectRation";
 
 import style from "./Animation.module.css";
@@ -39,7 +39,7 @@ import Snowfall from "components/Snowfall/Snowfall";
 interface IAnimation extends HTMLAttributes<HTMLDivElement> {
   garland?: "led" | "snow";
   star?: boolean;
-  toys?: (number | undefined | null)[];
+  toys?: (string | undefined | null)[];
 };
 
 const Animation: FC<IAnimation> = ({
@@ -48,6 +48,19 @@ const Animation: FC<IAnimation> = ({
   toys,
   ...others
 }) => {
+
+  console.log(toys)
+
+  const element = (
+    <>
+      <S1 garland={garland} star={star} toys={toys} />
+      <S2 garland={garland} toys={toys} />
+      <S3 garland={garland} toys={toys} />
+      <S4 garland={garland} toys={toys} />
+      <S5 garland={garland} />
+    </>
+  )
+
   return (
     <div className={style.Animation}>
       <Snowfall />
@@ -84,11 +97,7 @@ const Animation: FC<IAnimation> = ({
 
                 <Toys />
 
-                <S1 garland={garland} star={star} toys={toys} />
-                <S2 garland={garland} toys={toys} />
-                <S3 garland={garland} toys={toys} />
-                <S4 garland={garland} toys={toys} />
-                <S5 garland={garland} />
+                {element}
 
                 <TreeShadow />
                 <CloudBackground />
