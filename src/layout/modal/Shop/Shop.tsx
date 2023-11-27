@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes, Fragment } from "react";
 import { Badge, Card, CardContainer, Div, ModalPanel } from "components";
 
 import { useGlobalValue } from "elum-state/react";
@@ -25,24 +25,23 @@ const Shop: FC<Shop> = () => {
   }
 
   return (
-    <ModalPanel onClick={handlerClose} color={"#d8eaff"}>
+    <ModalPanel onClick={handlerClose} mode={"card"} color={"#d8eaff"}>
       <Div
         top={"32px"}
         bottom={"12px"}
       >
 
-        {value.toyShop && value.toyShop.map((group) => (
-          <>
+        {value.toyShop && value.toyShop.map((group, index) => (
+          <Fragment key={`badge_${index}`}>
             <Badge
 
               title={`${group.level} уровень`}
               description={group.description}
             />
             <CardContainer>
-              {group.items.map((elem) => (
+              {group.items.map((elem, index) => (
                 <Card
-                  key={`shop_${elem.toy}`}
-                  // title={elem.title}
+                  key={`shop_modal_${elem.toy}_${index}`}
                   image={elem.toy}
                   vote={elem.price}
 
@@ -50,7 +49,7 @@ const Shop: FC<Shop> = () => {
                 />
               ))}
             </CardContainer>
-          </>
+          </Fragment>
         ))}
 
 

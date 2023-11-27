@@ -11,7 +11,10 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import randomKeyGenerator from "./libs/classGenerator";
 
 import copy from "rollup-plugin-copy";
-import reactSvgPlugin from "vite-plugin-react-svg";
+// import reactSvgPlugin from "vite-plugin-react-svg";
+import { svgPlugin } from "vite-plugin-fast-react-svg";
+
+import { viteSingleFile } from "vite-plugin-singlefile"
 
 const generator = randomKeyGenerator();
 
@@ -58,13 +61,14 @@ export default defineConfig({
     host: "0.0.0.0"
   },
   plugins: [
-    reactSvgPlugin(),
+    svgPlugin(),
     tsconfigPaths(),
     react(),
     copy({
       targets: [
         { src: "CNAME", dest: "builds" },
       ]
-    })
+    }),
+    viteSingleFile()
   ]
 })

@@ -9,7 +9,6 @@ const Tree: FC<Tree> = ({
   children
 }) => {
   const value = useGlobalValue(DATA);
-  console.log(value.decorations)
   return (
     <Animation
       garland={value.decorations.garland}

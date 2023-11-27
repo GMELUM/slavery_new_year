@@ -37,7 +37,7 @@ import SnowBackground from "./symbol/SnowBackground";
 import Snowfall from "components/Snowfall/Snowfall";
 
 interface IAnimation extends HTMLAttributes<HTMLDivElement> {
-  garland?: "led" | "snow";
+  garland: string | undefined;
   star?: boolean;
   toys?: (string | undefined | null)[];
 };
@@ -48,8 +48,6 @@ const Animation: FC<IAnimation> = ({
   toys,
   ...others
 }) => {
-
-  console.log(toys)
 
   const element = (
     <>

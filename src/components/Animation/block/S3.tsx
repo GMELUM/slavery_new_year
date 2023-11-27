@@ -3,7 +3,7 @@ import { FC, HTMLAttributes, memo } from "react";
 import style from "../symbol/symbol.module.css";
 
 interface S3 extends HTMLAttributes<HTMLDivElement> {
-  garland?: "led" | "snow";
+  garland: string | undefined;
   toys?: (string | undefined | null)[];
 };
 

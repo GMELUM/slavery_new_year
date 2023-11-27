@@ -1,6 +1,2 @@
-/// <reference types="vite-plugin-svgr/client" />
-
-declare module '*.module.css' {
-  const styles: Record<string, string>
-  export default styles;
-}
+/// <reference types="vite-plugin-fast-react-svg/types" />
+/// <reference types="vite/client" />

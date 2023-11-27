@@ -17,7 +17,9 @@
     "react-dom": "^18.2.0",
     "react-three-fiber": "^6.0.13",
     "rollup-plugin-copy": "^3.5.0",
-    "three": "^0.158.0"
+    "three": "^0.158.0",
+    "vite-plugin-fast-react-svg": "^0.4.0",
+    "vite-plugin-singlefile": "^0.13.5"
   },
   "devDependencies": {
     "@andylacko/vite-svg-react-loader": "^3.0.16",

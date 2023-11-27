@@ -29,6 +29,7 @@ const Top: FC<Top> = () => {
           if (index > 49) { return }
           return (
             <RatingItem
+              key={`top_${index}`}
               position={index + 1}
               image={data.image}
               name={data.name}

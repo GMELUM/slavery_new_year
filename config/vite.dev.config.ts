@@ -3,7 +3,8 @@ import path from "node:path";
 import { defineConfig } from "vite";
 import { OutputOptions } from "rollup";
 
-import reactSvgPlugin from "vite-plugin-react-svg";
+// import reactSvgPlugin from "vite-plugin-react-svg";
+import { svgPlugin } from "vite-plugin-fast-react-svg";
 
 import { version } from "../package.json";
 import { compilerOptions } from "./tsconfig.json";
@@ -11,7 +12,7 @@ import { compilerOptions } from "./tsconfig.json";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import randomKeyGenerator from "./libs/classGenerator";
-import svgr from "vite-plugin-svgr";
+// import svgr from "vite-plugin-svgr";
 
 const generator = randomKeyGenerator();
 
@@ -60,6 +61,7 @@ export default defineConfig({
   plugins: [
     tsconfigPaths(),
     react(),
-    svgr(),
+    // svgr(),
+    svgPlugin(),
   ]
 })

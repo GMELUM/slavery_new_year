@@ -5,7 +5,6 @@ import addToy from "engine/libs/addToy";
 const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
   setTimeout(() => {
 
-    console.log(type)
 
     if (type.startsWith("toy_")) {
       setter(DATA, (data) => ({
@@ -15,7 +14,6 @@ const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
           toys: addToy(data.decorations.toys, type, 9)
         }
       }))
-      console.log(getter(DATA).decorations)
     }
 
     if (type.startsWith("star")) {
@@ -29,7 +27,6 @@ const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
     }
 
     if (type === "garland_2") {
-      console.log("Герлянда 2")
       setter(DATA, (data) => ({
         ...data,
         decorations: {
@@ -40,7 +37,6 @@ const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
     }
 
     if (type === "garland_1") {
-      console.log("Герлянда 1")
       setter(DATA, (data) => ({
         ...data,
         decorations: {
@@ -50,7 +46,6 @@ const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
       }))
     }
 
-    console.log(type);
     resolve(true);
   }, 2000)
 })

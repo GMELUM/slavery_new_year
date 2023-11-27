@@ -38,7 +38,7 @@ const Stock: FC<Stock> = () => {
       <CardContainer>
         {value.stock && value.stock.map((elem) =>
           <Card
-            key={`shop_${elem.type}`}
+            key={`stock_${elem.type}`}
             image={elem.type}
             count={elem.count}
             onClick={() => handlerGoods(elem.type)}

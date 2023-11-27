@@ -39,7 +39,6 @@ const Modal: FC<Modal> = ({
 
       //* Открытие модалки */
       if (!store.active && !!activeModal) {
-        console.log("открытие")
         setStore({
           to: "up",
           active: activeModal,
@@ -52,7 +51,6 @@ const Modal: FC<Modal> = ({
 
       //* Закрываем модалку */
       if (!!store.active && !activeModal) {
-        console.log("зфкрытие")
         setStore({
           to: "down",
           active: store.active,
@@ -65,7 +63,6 @@ const Modal: FC<Modal> = ({
 
       //* Смена модалки */
       if (store.active != activeModal) {
-        console.log("смена")
         setStore({
           to: "down",
           active: store.active,
