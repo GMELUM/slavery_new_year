@@ -123,7 +123,7 @@ const ModalPanel: FC<ModalPanel> = ({
               e.stopPropagation();
             }}
             style={{
-              background: snow ? "transparent" : "white"
+              background: snow ? "transparent" : (color || "white")
             }}
           >
             {snow && <ModalSnow width={"100%"} style={{

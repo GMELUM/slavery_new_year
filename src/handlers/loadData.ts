@@ -132,33 +132,39 @@ const loadData = () => new Promise<Data>((resolve) => {
       {
         key: "buy_slave",
         title: "Купить 5 рабов",
-        count: 1
+        elf: 1,
+        cone: 1
       },
       {
         key: "collect_coins",
         title: "Собрать монеты",
-        count: 1
+        elf: 1,
+        cone: 1
       },
       {
         key: "show_adds",
         title: "Посмотреть рекламу",
         badge: "до 5 раз в день",
-        count: 1
+        elf: 1,
+        cone: 1
       },
       {
         key: "refferal",
         title: "Пригласить друга в игру",
-        count: 2
+        elf: 1,
+        cone: 1
       },
       {
         key: "promo",
         title: "Промокод на",
-        count: 1
+        elf: 1,
+        cone: 1
       },
       {
         key: "tasks",
         title: "Выполняй цели - до ",
-        count: 1000
+        elf: 0,
+        cone: 1
       }
     ],
     toyShop: [
@@ -193,7 +199,7 @@ const loadData = () => new Promise<Data>((resolve) => {
           { toy: "toy_1", price: 3 },
           { toy: "toy_2", price: 3 },
           { toy: "toy_3", price: 3 },
-          { toy: "toy_3", price: 3 },
+          { toy: "toy_4", price: 3 },
           { toy: "toy_5", price: 3 },
           { toy: "toy_6", price: 3 },
           { toy: "toy_7", price: 3 },
@@ -215,6 +221,38 @@ const loadData = () => new Promise<Data>((resolve) => {
         items: [
           { toy: "star", price: 3 },
         ]
+      }
+    ],
+    vote: [
+      {
+        key: "item_1",
+        cone: 70,
+        elf: 210,
+        price: 21
+      },
+      {
+        key: "item_2",
+        cone: 21,
+        elf: 70,
+        price: 7
+      },
+      {
+        key: "item_3",
+        cone: 300,
+        elf: 666,
+        price: 66
+      },
+      {
+        key: "item_4",
+        cone: 600,
+        elf: 999,
+        price: 99
+      },
+      {
+        key: "item_5",
+        cone: 10000,
+        elf: 10000,
+        price: 999
       }
     ],
     decorations: {

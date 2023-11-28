@@ -43,7 +43,9 @@ export type Decorations = {
 export type Task = {
   key: string;
   title: string;
-  count: number;
+  elf: number;
+  cone: number;
+
   badge?: string;
 }
 export type Tasks = Task[];
@@ -58,6 +60,14 @@ export type ListToy = Array<{
   items: Array<Toy>;
 }>
 
+export type Vote = {
+  key: string;
+  cone?: number;
+  elf?: number;
+  price: number;
+}
+export type ListVote = Vote[];
+
 export type Data = {
   cone: number;
   elf: number;
@@ -67,9 +77,10 @@ export type Data = {
 
   tasks: Tasks;
   rating: RatingList;
-  shop?: ShopList;
-  stock?: StockList;
+  shop: ShopList;
+  stock: StockList;
   toyShop: ListToy;
+  vote: ListVote;
   decorations: Decorations;
 }
 
@@ -82,9 +93,12 @@ export const DATA = atom<Data>({
 
     notification: false,
 
+    shop: [],
+    stock: [],
     tasks: [],
     rating: [],
     toyShop: [],
+    vote: [],
     decorations: {
       garland: undefined,
       star: false,

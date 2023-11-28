@@ -5,7 +5,6 @@ import addToy from "engine/libs/addToy";
 const executeBuy = (type: string) => new Promise<boolean>((resolve) => {
   setTimeout(() => {
 
-
     if (type.startsWith("toy_")) {
       setter(DATA, (data) => ({
         ...data,

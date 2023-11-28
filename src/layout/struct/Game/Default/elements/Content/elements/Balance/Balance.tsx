@@ -11,7 +11,7 @@ const Balance: FC<Balance> = () => {
   const value = useGlobalValue(DATA);
 
   const handlerClick = () => {
-    console.log("click")
+    nextPage({ modal: "vote" })
   }
 
   const handlerNotify = async () => {

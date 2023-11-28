@@ -6,7 +6,7 @@ import { DATA } from "engine/state/atoms";
 // import executeTask from "handlers/executeTask";
 import { FC, HTMLAttributes, useMemo } from "react";
 
-import { Tasks as TasksIcon } from "icons"
+import { Tasks as TasksIcon } from "icons";
 import executeTask from "handlers/executeStock";
 
 interface Tasks extends HTMLAttributes<HTMLDivElement> { };
@@ -41,7 +41,12 @@ const Tasks: FC<Tasks> = () => {
         <Item
           key={elem.key}
           title={elem.title}
-          count={elem.count}
+          
+          elf={elem.elf}
+          cone={elem.cone}
+
+          // count={elem.count}
+          badge={elem.badge}
           onClick={() => handlerTask(elem.key)}
         />
       ))}

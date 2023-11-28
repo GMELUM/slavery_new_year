@@ -1,5 +1,6 @@
 import { FC, HTMLAttributes, useMemo } from "react";
 import {
+  Currency,
   Events,
   Ratio,
   Snowfall,
@@ -9,26 +10,26 @@ import {
 import style from "./Item.module.css";
 
 import {
-  Box1,
-  Box2,
-  Box3,
-  Smile1,
-  Smile2,
-  Smile3,
-  Frame,
-  Gingerbread,
-  Jam,
+  Cone,
+  Elf,
   SnowFlake
 } from "icons";
 
 interface Item extends HTMLAttributes<HTMLDivElement> {
-  count: number;
+  count?: number;
   title: string;
+  badge?: string;
+
+  elf?: number;
+  cone?: number;
 };
 
 const Item: FC<Item> = ({
   count,
   title,
+  badge,
+  elf,
+  cone,
   children,
   ...prevProps
 }) => {
@@ -41,10 +42,18 @@ const Item: FC<Item> = ({
             <Text size={"normal"} weight={"bold"}>{title}</Text>
           </div>}
 
-          {count && <div className={style.Item__price}>
-            <Text size={"normal"} weight={"bold"}>{count}</Text>
-            <SnowFlake />
-          </div>}
+          <div className={style.Item__price}>
+            {!!elf && <div className={style.Item__element}>
+              <span>{elf}</span>
+              <Elf />
+            </div>}
+            <div className={style.Item__element}>
+              <span>{cone}</span>
+              <Cone />
+            </div>
+          </div>
+
+          {badge && <div className={style.Item__badge}><span>{badge}</span></div>}
 
         </div>
       </div>

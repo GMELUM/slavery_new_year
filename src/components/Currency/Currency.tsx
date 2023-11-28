@@ -18,7 +18,7 @@ interface ICurrency extends HTMLAttributes<HTMLDivElement> {
   position: "left" | "right";
   type: "snowflake" | "elf" | "cone";
   value: number | string;
-  size?: 1 | 2 | 3;
+  size?: 1 | 2 | 3 | 4;
 };
 
 const Currency: FC<ICurrency> = ({
@@ -30,7 +30,7 @@ const Currency: FC<ICurrency> = ({
   ...prevProps
 }) => {
 
-  const iconSize = [16, 24, 32][size - 1]
+  const iconSize = [16, 24, 32, 16][size - 1]
 
   return (
     <div className={classes(style["Currency"], {

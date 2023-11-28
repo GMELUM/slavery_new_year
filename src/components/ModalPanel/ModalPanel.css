@@ -71,6 +71,8 @@
   justify-content: center;
   box-sizing: border-box;
   padding: 10px 0 0;
+  transform: translateZ(10px);
+  z-index: 999;
 }
 
 .ModalPanel__header div {
