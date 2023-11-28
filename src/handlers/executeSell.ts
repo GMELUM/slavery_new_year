@@ -1,11 +1,12 @@
 import { setter } from "elum-state/react";
 import { DATA } from "engine/state/atoms";
 
-const executeSell = () => new Promise<boolean>((resolve) => {
+const executeSell = (type: string) => new Promise<boolean>((resolve) => {
   setTimeout(() => {
     setter(DATA, (data) => ({
       ...data,
       timestamp: Date.now() + (1000 * 60 * 60 * 2),
+      snowflake: data.snowflake + (type === "default" ? 20 : 22),
       decorations: {
         garland: undefined,
         star: false,

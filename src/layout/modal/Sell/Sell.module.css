@@ -1,0 +1,133 @@
+.Container {
+  padding: 12px;
+  position: relative;
+  overflow: hidden;
+  background: #e77f00;
+}
+
+.Pumpkin__title {
+  display: flex;
+  color: #ffffff;
+  font-size: 19pt;
+  padding: 12px 0;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.Pumpkin__content {
+  display: flex;
+  position: relative;
+  font-size: 10pt;
+  font-weight: 500;
+  padding: 12px 32px;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Pumpkin__content button {
+  margin-bottom: 12px
+}
+
+.Rays__background {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.Pumpkin__counter {
+  display: flex;
+  border-radius: 12px;
+  padding: 12px 24px;
+  margin: 28px 0;
+  color: white;
+  background-color: #ffffff21;
+}
+
+.Pumpkin__counter span {
+  display: flex;
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 29pt;
+  /* padding: 0 12px; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.Rays {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: _rotating 35s linear infinite;
+  -moz-animation: _rotating 35s linear infinite;
+  -ms-animation: _rotating 35s linear infinite;
+  -o-animation: _rotating 35s linear infinite;
+  animation: _rotating 35s linear infinite;
+}
+
+@keyframes _rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.Box__a,
+.Box__b,
+.Box__c,
+.Box__d,
+.Box__e {
+  display: flex;
+  position: absolute;
+  opacity: 0.25;
+}
+
+.Box__a {
+  width: 125px;
+  top: -8px;
+  left: -20px;
+  transform: rotate(45deg);
+}
+
+.Box__b {
+  width: 50px;
+  bottom: 5px;
+  left: -25px;
+  transform: rotate(26deg);
+}
+
+.Box__c {
+  width: 75px;
+  top: -6px;
+  right: 10px;
+  transform: rotate(-20deg);
+}
+
+.Box__d {
+  width: 75px;
+  top: 38%;
+  right: -23px;
+  transform: rotate(-20deg);
+}
+
+.Box__e {
+  width: 150px;
+  bottom: -19px;
+  right: -12px;
+  transform: rotate(-34deg);
+}

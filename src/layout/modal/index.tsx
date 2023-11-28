@@ -11,6 +11,7 @@ import Gingerbread from './Gingerbread/Gingerbread';
 import Frame from './Frame/Frame';
 import Jam from './Jam/Jam';
 import Vote from './Vote/Vote';
+import Sell from './Sell/Sell';
 
 interface Modals extends HTMLAttributes<HTMLDivElement> { };
 
@@ -31,6 +32,7 @@ const Modals: FC<Modals> = ({ }) => {
       <Frame nav={"frame"} />
       <Jam nav={"jam"} />
       <Vote nav={"vote"} />
+      <Sell nav={"sell"} />
 
     </Modal>
   )

@@ -10,6 +10,7 @@ import ButtonList from "components/ButtonList/ButtonList";
 import Ads from "components/Ads/Ads";
 import { Cone } from "icons";
 import executeSell from "handlers/executeSell";
+import executeSellOpen from "handlers/executeSellOpen";
 
 interface Action extends HTMLAttributes<HTMLDivElement> { };
 
@@ -34,8 +35,9 @@ const Action: FC<Action> = () => {
 
   const handlerSell = async () => {
     nextPage({ popout: "loading", freeze: true });
-    const result = await executeSell();
-    backPage({ ignoreFreeze: true, toStay: "game" })
+    const result = await executeSellOpen();
+    backPage({ ignoreFreeze: true, toStay: "game" });
+    nextPage({ modal: "sell" })
   }
 
   useEffect(() => {

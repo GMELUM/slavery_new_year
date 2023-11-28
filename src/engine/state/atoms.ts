@@ -76,6 +76,7 @@ export type Data = {
 
   timestamp?: number;
 
+  picking?: number;
   cone: number;
   elf: number;
   snowflake: number;
