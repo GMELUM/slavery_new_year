@@ -43,16 +43,19 @@ export type Decorations = {
 export type Task = {
   key: string;
   title: string;
-  elf: number;
-  cone: number;
-
+  elf?: number;
+  cone?: number;
+  snowflake?: number;
   badge?: string;
 }
 export type Tasks = Task[];
 
 export type Toy = {
   toy: string;
-  price: number;
+  vote?: number;
+  elf?: number;
+  cone?: number;
+  snowflake?: number;
 }
 export type ListToy = Array<{
   level: string;
@@ -64,11 +67,15 @@ export type Vote = {
   key: string;
   cone?: number;
   elf?: number;
+  snowflake?: number;
   price: number;
 }
 export type ListVote = Vote[];
 
 export type Data = {
+
+  timestamp?: number;
+
   cone: number;
   elf: number;
   snowflake: number;
@@ -87,6 +94,9 @@ export type Data = {
 export const DATA = atom<Data>({
   key: "global_data",
   default: {
+
+    // timestamp: 0,
+
     cone: 0,
     elf: 0,
     snowflake: 0,

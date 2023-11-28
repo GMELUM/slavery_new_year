@@ -43,7 +43,11 @@ const Shop: FC<Shop> = () => {
                 <Card
                   key={`shop_modal_${elem.toy}_${index}`}
                   image={elem.toy}
-                  vote={elem.price}
+
+                  vote={elem.vote}
+                  cone={elem.cone}
+                  elf={elem.elf}
+                  snowflake={elem.snowflake}
 
                   onClick={() => handlerShop(elem.toy)}
                 />

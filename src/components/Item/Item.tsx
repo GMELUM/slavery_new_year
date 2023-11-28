@@ -19,7 +19,7 @@ interface Item extends HTMLAttributes<HTMLDivElement> {
   count?: number;
   title: string;
   badge?: string;
-
+  snowflake?: number;
   elf?: number;
   cone?: number;
 };
@@ -30,6 +30,7 @@ const Item: FC<Item> = ({
   badge,
   elf,
   cone,
+  snowflake,
   children,
   ...prevProps
 }) => {
@@ -47,10 +48,14 @@ const Item: FC<Item> = ({
               <span>{elf}</span>
               <Elf />
             </div>}
-            <div className={style.Item__element}>
+            {!!cone && <div className={style.Item__element}>
               <span>{cone}</span>
               <Cone />
-            </div>
+            </div>}
+            {!!snowflake && <div className={style.Item__element}>
+              <span>{snowflake}</span>
+              <SnowFlake />
+            </div>}
           </div>
 
           {badge && <div className={style.Item__badge}><span>{badge}</span></div>}

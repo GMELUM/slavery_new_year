@@ -4,6 +4,7 @@ import { DATA, Data } from "engine/state/atoms";
 const loadData = () => new Promise<Data>((resolve) => {
   setTimeout(() => resolve({
     ...getter(DATA),
+    // timestamp: Date.now() + (1000 * 60 * 60 * 2),
     cone: 24,
     elf: 10,
     snowflake: 112,
@@ -138,8 +139,7 @@ const loadData = () => new Promise<Data>((resolve) => {
       {
         key: "collect_coins",
         title: "Собрать монеты",
-        elf: 1,
-        cone: 1
+        snowflake: 1
       },
       {
         key: "show_adds",
@@ -172,54 +172,54 @@ const loadData = () => new Promise<Data>((resolve) => {
         level: "Обычные шарики",
         description: "добавляет X снежинок",
         items: [
-          { toy: "toy_10", price: 1 },
-          { toy: "toy_11", price: 1 },
-          { toy: "toy_12", price: 1 },
-          { toy: "toy_13", price: 1 },
-          { toy: "toy_14", price: 1 },
-          { toy: "toy_15", price: 1 },
+          { toy: "toy_10", snowflake: 1 },
+          { toy: "toy_11", snowflake: 1 },
+          { toy: "toy_12", snowflake: 1 },
+          { toy: "toy_13", snowflake: 1 },
+          { toy: "toy_14", snowflake: 1 },
+          { toy: "toy_15", snowflake: 1 },
         ]
       },
       {
         level: "Звёздочки",
         description: "добавляет X снежинок",
         items: [
-          { toy: "toy_16", price: 2 },
-          { toy: "toy_17", price: 2 },
-          { toy: "toy_18", price: 2 },
-          { toy: "toy_19", price: 2 },
-          { toy: "toy_20", price: 2 },
-          { toy: "toy_21", price: 2 },
+          { toy: "toy_16", cone: 2 },
+          { toy: "toy_17", cone: 2 },
+          { toy: "toy_18", cone: 2 },
+          { toy: "toy_19", cone: 2 },
+          { toy: "toy_20", cone: 2 },
+          { toy: "toy_21", cone: 2 },
         ]
       },
       {
         level: "Шарики с узорами",
         description: "добавляет X снежинок",
         items: [
-          { toy: "toy_1", price: 3 },
-          { toy: "toy_2", price: 3 },
-          { toy: "toy_3", price: 3 },
-          { toy: "toy_4", price: 3 },
-          { toy: "toy_5", price: 3 },
-          { toy: "toy_6", price: 3 },
-          { toy: "toy_7", price: 3 },
-          { toy: "toy_8", price: 3 },
-          { toy: "toy_9", price: 3 },
+          { toy: "toy_1", vote: 3 },
+          { toy: "toy_2", vote: 3 },
+          { toy: "toy_3", vote: 3 },
+          { toy: "toy_4", vote: 3 },
+          { toy: "toy_5", vote: 3 },
+          { toy: "toy_6", vote: 3 },
+          { toy: "toy_7", vote: 3 },
+          { toy: "toy_8", vote: 3 },
+          { toy: "toy_9", vote: 3 },
         ]
       },
       {
         level: "Герлянды",
         description: "добавляет X снежинок",
         items: [
-          { toy: "garland_1", price: 3 },
-          { toy: "garland_2", price: 3 },
+          { toy: "garland_1", vote: 3 },
+          { toy: "garland_2", vote: 3 },
         ]
       },
       {
         level: "Звезда",
         description: "добавляет X снежинок",
         items: [
-          { toy: "star", price: 3 },
+          { toy: "star", vote: 3 },
         ]
       }
     ],
@@ -227,38 +227,38 @@ const loadData = () => new Promise<Data>((resolve) => {
       {
         key: "item_1",
         cone: 70,
-        elf: 210,
+        snowflake: 210,
         price: 21
       },
       {
         key: "item_2",
         cone: 21,
-        elf: 70,
+        snowflake: 70,
         price: 7
       },
       {
         key: "item_3",
         cone: 300,
-        elf: 666,
+        snowflake: 666,
         price: 66
       },
       {
         key: "item_4",
         cone: 600,
-        elf: 999,
+        snowflake: 999,
         price: 99
       },
       {
         key: "item_5",
         cone: 10000,
-        elf: 10000,
+        snowflake: 10000,
         price: 999
       }
     ],
     decorations: {
-      garland: undefined,
+      garland: "snow",
       star: false,
-      toys: []
+      toys: ["toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1"]
     }
   }))
 })

@@ -87,17 +87,17 @@
 
 .Item__element {
   display: flex;
-  background-color: #e0eaff;
+  background-color: #5487ff;
   height: 22px;
   width: 100%;
   justify-content: flex-end;
-  color: #737373;
+  color: #ffffff;
   border-radius: 8px;
   align-items: center;
 }
 
-.Item__element:first-child {
-  margin-bottom: 6px;
+.Item__element:not(:first-child) {
+  margin-top: 6px;
 }
 
 .Item__element span {

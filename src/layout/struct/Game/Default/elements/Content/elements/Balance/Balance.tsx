@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from "react";
-import { Centered, BalanceContainer, Currency, Notify } from "components";
+import { Centered, BalanceContainer, Currency, Notify, Button } from "components";
 import { useGlobalValue } from "elum-state/react";
 import { DATA } from "engine/state/atoms";
 import { backPage, nextPage } from "elum-router/react";
@@ -14,6 +14,10 @@ const Balance: FC<Balance> = () => {
     nextPage({ modal: "vote" })
   }
 
+  const handlerInfo = () => {
+    nextPage({ modal: "how_to_play" })
+  }
+
   const handlerNotify = async () => {
     nextPage({ popout: "loading", freeze: true });
     const result = await executeNotify();
@@ -23,6 +27,13 @@ const Balance: FC<Balance> = () => {
   return (
     <Centered>
       <BalanceContainer>
+
+        <Button
+          size={"ss"}
+          mode={"blur"}
+          style={{ width: "180px" }}
+          onClick={handlerInfo}
+        >Как играть?</Button>
 
         {value.notification &&
           <Notify onClick={handlerNotify} />}

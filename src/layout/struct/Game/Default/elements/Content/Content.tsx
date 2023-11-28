@@ -12,6 +12,7 @@ import Top from "./elements/Top/Top";
 import Shop from "./elements/Shop/Shop";
 import Tasks from "./elements/Tasks/Tasks";
 import Stock from "./elements/Stock/Stock";
+import SubAction from "./elements/SubAction/SubAction";
 
 interface Content extends HTMLAttributes<HTMLDivElement> { };
 
@@ -25,13 +26,13 @@ const Content: FC<Content> = () => {
         <Balance />
         <Tree />
 
-
         <ProgressBar />
         <Action />
 
       </Full>
 
       <Snow>
+        <SubAction />
         <Tasks />
         <Shop />
         <Stock />

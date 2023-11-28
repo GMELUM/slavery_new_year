@@ -7,13 +7,15 @@ import style from "./VoteItem.module.css";
 
 import {
   Cone,
-  Elf
+  Elf,
+  SnowFlake
 } from "icons";
 import { decWord } from "engine";
 
 interface VoteItem extends HTMLAttributes<HTMLDivElement> {
   elf?: number;
   cone?: number;
+  snowflake?: number;
   price: number;
 };
 
@@ -21,6 +23,7 @@ const VoteItem: FC<VoteItem> = ({
   elf,
   cone,
   price,
+  snowflake,
   children,
   ...prevProps
 }) => {
@@ -35,6 +38,9 @@ const VoteItem: FC<VoteItem> = ({
               </div>}
               {cone && <div className={style.VoteItem__value}>
                 {cone} <Cone />
+              </div>}
+              {snowflake && <div className={style.VoteItem__value}>
+                {snowflake} <SnowFlake />
               </div>}
             </div>
           </div>

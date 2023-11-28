@@ -1,0 +1,11 @@
+.ButtonList {
+  display: grid;
+  width: 100%;
+  grid-gap: 6px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.ButtonList button:not(:last-child) {
+  margin-bottom: 6px;
+}

@@ -40,6 +40,7 @@ const Vote: FC<Vote> = () => {
             key={`voteitem_index`}
             cone={elem.cone}
             elf={elem.elf}
+            snowflake={elem.snowflake}
             price={elem.price}
             onClick={() => handlerVote(elem.key)}
           />

@@ -49,6 +49,7 @@ const Button: FC<IButton> = ({
 
   return (
     <Events
+      {...prevProps}
       disabled={disabled}
       style={{ backgroundColor: color }}
       className={classes(style.Button, {
@@ -68,10 +69,9 @@ const Button: FC<IButton> = ({
       type={"button"}
       onClick={handleClick}
     >
+      {badge && <div className={style.Item__badge}><span>{badge}</span></div>}
       <div className={style.Button__inner}>
-        {badge && <div className={style.Button__badge}>
-          <Text size={"small"}>{badge}</Text>
-        </div>}
+
         <div className={style.Button__before}>{before}</div>
         <div className={style.Button__children}>{children}</div>
         <div className={style.Button__after}>{after}</div>

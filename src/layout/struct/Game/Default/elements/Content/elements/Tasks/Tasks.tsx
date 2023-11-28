@@ -41,10 +41,10 @@ const Tasks: FC<Tasks> = () => {
         <Item
           key={elem.key}
           title={elem.title}
-          
+
           elf={elem.elf}
           cone={elem.cone}
-
+          snowflake={elem.snowflake}
           // count={elem.count}
           badge={elem.badge}
           onClick={() => handlerTask(elem.key)}

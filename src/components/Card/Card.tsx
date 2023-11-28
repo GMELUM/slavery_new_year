@@ -43,6 +43,8 @@ import {
   ToyStar,
   ToyGarland1,
   ToyGarland2,
+  Cone,
+  Elf,
 
 } from "icons";
 import { decWord } from "engine";
@@ -92,7 +94,11 @@ interface ICardContainer extends HTMLAttributes<HTMLDivElement> {
   vote?: number;
   count?: number;
   title?: string;
-  price?: number;
+
+  cone?: number;
+  elf?: number;
+  snowflake?: number;
+
   sold?: boolean;
   onInfo?: () => void;
 };
@@ -101,7 +107,11 @@ const Card: FC<ICardContainer> = ({
   image,
   count,
   title,
-  price,
+
+  cone,
+  elf,
+  snowflake,
+
   sold,
   vote,
   onInfo,
@@ -144,8 +154,16 @@ const Card: FC<ICardContainer> = ({
             <Text size={"small"} weight={"bold"}>{title}</Text>
           </div>}
 
-          {price && <div className={style.Card__price}>
-            <SnowFlake /> {price}
+          {snowflake && <div className={style.Card__price}>
+            <SnowFlake /> {snowflake}
+          </div>}
+
+          {cone && <div className={style.Card__price}>
+            <Cone /> {cone}
+          </div>}
+
+          {elf && <div className={style.Card__price}>
+            <Elf /> {elf}
           </div>}
 
           {count && <div className={style.Card__count}>
