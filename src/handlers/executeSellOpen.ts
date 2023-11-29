@@ -10,7 +10,7 @@ const executeSellOpen = () => new Promise<boolean>((resolve) => {
     }))
 
     resolve(true);
-  }, 2000)
+  }, 500)
 })
 
 export default executeSellOpen;
