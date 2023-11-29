@@ -36,7 +36,7 @@ const Action: FC<Action> = () => {
   const handlerSell = async () => {
     nextPage({ popout: "loading", freeze: true });
     const result = await executeSellOpen();
-    backPage({ ignoreFreeze: true, toStay: "game" });
+    // backPage({ ignoreFreeze: true, toStay: "game" });
     nextPage({ modal: "sell" })
   }
 
