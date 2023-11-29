@@ -24,7 +24,7 @@ const Sell: FC<Sell> = () => {
   }
 
   const handlerClose = () => {
-    backPage()
+    backPage({ ignoreFreeze: true, toStay: "game" });
   }
 
   return (
