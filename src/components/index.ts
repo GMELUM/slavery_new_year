@@ -25,6 +25,7 @@ export { default as GroupHeader } from "./GroupHeader/GroupHeader";
 export { default as Canvas } from "./Canvas/Canvas";
 export { default as Notify } from "./Notify/Notify";
 export { default as Badge } from "./Badge/Badge";
+export { default as Banner } from "./Banner/Banner";
 
 export { default as CardContainer } from "./CardContainer/CardContainer";
 export { default as Card } from "./Card/Card";

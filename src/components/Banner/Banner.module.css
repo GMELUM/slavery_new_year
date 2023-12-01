@@ -1,0 +1,24 @@
+.Banner {
+  padding: 12px 12px 0 12px;
+  box-sizing: border-box;
+  transition: .24s;
+}
+
+.Banner__inner {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.Banner__inner img {
+  display: block;
+  width: 100%;
+}
+
+.Banner._hover {
+  transform: scale(.99);
+}
+
+.Banner._active {
+  transform: scale(.98);
+}

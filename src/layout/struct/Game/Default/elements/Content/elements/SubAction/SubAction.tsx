@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from "react";
-import { Button, Centered } from "components";
+import { Banner, Button, Centered } from "components";
 
 import { backPage, nextPage } from "elum-router/react";
 import { useGlobalValue } from "elum-state/react";
@@ -23,6 +23,13 @@ const SubAction: FC<SubAction> = () => {
 
   return (
     <Centered>
+
+      <Banner
+        href={"https://vk.com/app51520079#slavery"}
+        target={"_blank"}
+      >
+        <img src={"./memory.png"} />
+      </Banner>
 
       <ButtonList>
 
