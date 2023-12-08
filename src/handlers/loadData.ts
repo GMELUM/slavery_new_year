@@ -12,55 +12,55 @@ const loadData = () => new Promise<Data>((resolve) => {
     shop: [
       {
         type: "box_1",
-        price: 99,
+        snowflake: 99,
         title: "Маленький набор",
         isOver: false
       },
       {
         type: "box_2",
-        price: 249,
+        snowflake: 249,
         title: "Средний набор",
         isOver: false
       },
       {
         type: "box_3",
-        price: 999,
+        snowflake: 999,
         title: "Большой набор",
         isOver: false
       },
       {
         type: "smile_1",
-        price: 99,
+        snowflake: 99,
         title: "Смайлик к имени 1",
         isOver: false
       },
       {
         type: "smile_2",
-        price: 99,
+        snowflake: 99,
         title: "Смайлик к имени 2",
         isOver: false
       },
       {
         type: "smile_3",
-        price: 99,
+        snowflake: 99,
         title: "Смайлик к имени 3",
         isOver: false
       },
       {
         type: "gingerbread",
-        price: 999,
+        snowflake: 999,
         title: "Пряник",
         isOver: false
       },
       {
         type: "frame",
-        price: 999,
+        snowflake: 999,
         title: "Рамка для профиля",
         isOver: false
       },
       {
         type: "jam",
-        price: 279,
+        snowflake: 279,
         title: "Земляничное варенье",
         isOver: false
       }
@@ -68,7 +68,7 @@ const loadData = () => new Promise<Data>((resolve) => {
     stock: [
       {
         type: "box_1",
-        count: 10
+        count: 0
       },
       {
         type: "box_2",
@@ -76,7 +76,7 @@ const loadData = () => new Promise<Data>((resolve) => {
       },
       {
         type: "box_3",
-        count: 4
+        count: 0
       }
     ],
     rating: [

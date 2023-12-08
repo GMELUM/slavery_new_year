@@ -121,7 +121,7 @@ const Card: FC<ICardContainer> = ({
 
   const element = useMemo(() => images[image], []);
 
-  const size = count ? {
+  const size = (count || count === 0) ? {
     width: 1,
     height: 1
   } : {
@@ -154,19 +154,19 @@ const Card: FC<ICardContainer> = ({
             <Text size={"small"} weight={"bold"}>{title}</Text>
           </div>}
 
-          {snowflake && <div className={style.Card__price}>
+          {(snowflake || snowflake === 0) && <div className={style.Card__price}>
             <SnowFlake /> {snowflake}
           </div>}
 
-          {cone && <div className={style.Card__price}>
+          {(cone || cone === 0) && <div className={style.Card__price}>
             <Cone /> {cone}
           </div>}
 
-          {elf && <div className={style.Card__price}>
+          {(elf || elf === 0) && <div className={style.Card__price}>
             <Elf /> {elf}
           </div>}
 
-          {count && <div className={style.Card__count}>
+          {(count || count === 0) && <div className={style.Card__count}>
             {count}
           </div>}
 

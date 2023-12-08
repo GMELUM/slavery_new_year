@@ -19,7 +19,12 @@ export type Goods = {
   "frame" |
   "gingerbread" |
   "jam";
-  price: number;
+  // price: number;
+  
+  elf?: number;
+  cone?: number;
+  snowflake?: number;
+
   title: string;
   isOver: boolean;
 }

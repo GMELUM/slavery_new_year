@@ -58,7 +58,10 @@ const Shop: FC<Shop> = () => {
             key={`shop_${elem.type} + ${elem.isOver}`}
             title={elem.title}
             image={elem.type}
-            price={elem.price}
+            
+            elf={elem.elf}
+            snowflake={elem.snowflake}
+            cone={elem.cone}
 
             onInfo={() => handlerInfo(elem.type)}
             onClick={() => handlerGoods(elem.type)}
