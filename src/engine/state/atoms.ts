@@ -19,8 +19,8 @@ export type Goods = {
   "frame" |
   "gingerbread" |
   "jam";
+
   // price: number;
-  
   elf?: number;
   cone?: number;
   snowflake?: number;
@@ -41,7 +41,7 @@ export type StockList = Stock[];
 
 export type Decorations = {
   garland: "led" | "snow" | string | undefined;
-  star: boolean;
+  star: "star_1" | "star_2" | "star_3" | string | boolean;
   toys: (string | undefined | null)[];
 }
 
@@ -80,6 +80,7 @@ export type ListVote = Vote[];
 export type Data = {
 
   timestamp?: number;
+  craftTimestamp?: number;
 
   picking?: number;
   cone: number;
@@ -93,6 +94,7 @@ export type Data = {
   shop: ShopList;
   stock: StockList;
   toyShop: ListToy;
+  toyCraft: ListToy;
   vote: ListVote;
   decorations: Decorations;
 }
@@ -102,6 +104,7 @@ export const DATA = atom<Data>({
   default: {
 
     // timestamp: 0,
+    // craftTimestamp: 0,
 
     cone: 0,
     elf: 0,
@@ -114,6 +117,7 @@ export const DATA = atom<Data>({
     tasks: [],
     rating: [],
     toyShop: [],
+    toyCraft: [],
     vote: [],
     decorations: {
       garland: undefined,

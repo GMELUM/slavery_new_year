@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, useMemo } from "react";
+import { FC, HTMLAttributes, ReactElement, useMemo } from "react";
 import {
   Events,
   Ratio,
@@ -40,14 +40,18 @@ import {
   Toy12,
   Toy13,
   Toy14,
-  ToyStar,
+  Star1,
+  Star2,
   ToyGarland1,
   ToyGarland2,
   Cone,
   Elf,
+  Toy22,
+  Toy23,
+  Toy24,
 
 } from "icons";
-import { decWord } from "engine";
+import { classes, decWord } from "engine";
 
 const images = {
 
@@ -82,8 +86,12 @@ const images = {
   "toy_19": <Toy19 />,
   "toy_20": <Toy20 />,
   "toy_21": <Toy21 />,
+  "toy_22": <Toy22 />,
+  "toy_23": <Toy23 />,
+  "toy_24": <Toy24 />,
 
-  "star": <ToyStar />,
+  "star_1": <Star1 />,
+  "star_2": <Star2 />,
   "garland_1": <ToyGarland1 />,
   "garland_2": <ToyGarland2 />
 
@@ -95,9 +103,13 @@ interface ICardContainer extends HTMLAttributes<HTMLDivElement> {
   count?: number;
   title?: string;
 
+  mode?: "vertical" | "horizontal"
+
   cone?: number;
   elf?: number;
   snowflake?: number;
+
+  action?: ReactElement
 
   sold?: boolean;
   onInfo?: () => void;
@@ -108,9 +120,13 @@ const Card: FC<ICardContainer> = ({
   count,
   title,
 
+  mode = "vertical",
+
   cone,
   elf,
   snowflake,
+
+  action,
 
   sold,
   vote,
@@ -121,7 +137,7 @@ const Card: FC<ICardContainer> = ({
 
   const element = useMemo(() => images[image], []);
 
-  const size = (count || count === 0) ? {
+  let size = (count || count === 0) ? {
     width: 1,
     height: 1
   } : {
@@ -129,9 +145,19 @@ const Card: FC<ICardContainer> = ({
     height: 3
   }
 
+  if (mode === "horizontal") {
+    size = {
+      width: 0,
+      height: 0
+    }
+  }
+
   return (
     <Events
-      className={style.Card}
+      className={classes(style.Card, {
+        [style["Card--vertical"]]: mode === "vertical",
+        [style["Card--horizontal"]]: mode === "horizontal"
+      })}
       disabled={sold}
       {...prevProps}
     >
@@ -154,25 +180,33 @@ const Card: FC<ICardContainer> = ({
             <Text size={"small"} weight={"bold"}>{title}</Text>
           </div>}
 
-          {(snowflake || snowflake === 0) && <div className={style.Card__price}>
-            <SnowFlake /> {snowflake}
-          </div>}
+          <div className={style.Card__price_container}>
+            {(snowflake || snowflake === 0) && <div className={style.Card__price}>
+              <SnowFlake /> {snowflake}
+            </div>}
 
-          {(cone || cone === 0) && <div className={style.Card__price}>
-            <Cone /> {cone}
-          </div>}
+            {(cone || cone === 0) && <div className={style.Card__price}>
+              <Cone /> {cone}
+            </div>}
 
-          {(elf || elf === 0) && <div className={style.Card__price}>
-            <Elf /> {elf}
-          </div>}
+            {(elf || elf === 0) && <div className={style.Card__price}>
+              <Elf /> {elf}
+            </div>}
 
-          {(count || count === 0) && <div className={style.Card__count}>
-            {count}
-          </div>}
+            {(count || count === 0) && <div className={style.Card__count}>
+              {count}
+            </div>}
 
-          {vote && <div className={style.Card__vote}>
-            {vote} {decWord(vote, ["голос", "голоса", "голосов"])}
-          </div>}
+            {vote && <div className={style.Card__vote}>
+              {vote} {decWord(vote, ["голос", "голоса", "голосов"])}
+            </div>}
+          </div>
+
+          {action &&
+            <div className={style.Card__button}>
+              {action}
+            </div>
+          }
 
         </div>
       </Ratio>

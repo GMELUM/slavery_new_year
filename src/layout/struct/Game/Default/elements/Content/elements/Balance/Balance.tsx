@@ -24,6 +24,10 @@ const Balance: FC<Balance> = () => {
     backPage({ ignoreFreeze: true, toStay: "game" })
   }
 
+  const handlerElf = async () => {
+    nextPage({ modal: "shop", params: { tab: "craft" } })
+  }
+
   return (
     <Centered>
       <BalanceContainer>
@@ -39,6 +43,7 @@ const Balance: FC<Balance> = () => {
           <Notify onClick={handlerNotify} />}
 
         <Currency
+          button
           position={"right"}
           type={"cone"}
           value={value.cone}
@@ -50,6 +55,7 @@ const Balance: FC<Balance> = () => {
           type={"elf"}
           value={value.elf}
           size={3}
+          onClick={handlerElf}
         />
         <Currency
           position={"right"}

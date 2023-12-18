@@ -38,7 +38,7 @@ import Snowfall from "components/Snowfall/Snowfall";
 
 interface IAnimation extends HTMLAttributes<HTMLDivElement> {
   garland: string | undefined;
-  star?: boolean;
+  star?: "star_1" | "star_2" | "star_3" | string | boolean;
   toys?: (string | undefined | null)[];
 };
 
@@ -51,7 +51,7 @@ const Animation: FC<IAnimation> = ({
 
   const element = (
     <>
-      <S1 garland={garland} star={star} toys={toys} />
+      <S1 garland={garland} star={!!star} toys={toys} />
       <S2 garland={garland} toys={toys} />
       <S3 garland={garland} toys={toys} />
       <S4 garland={garland} toys={toys} />
@@ -75,7 +75,7 @@ const Animation: FC<IAnimation> = ({
                 <Segment4 />
                 <Segment5 />
 
-                <Star />
+                <Star type={star || false} />
 
                 <GarlandBlue />
                 <GarlandGreen />

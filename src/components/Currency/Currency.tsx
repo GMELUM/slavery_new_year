@@ -6,15 +6,12 @@ import {
   SnowFlake
 } from "icons"
 
-// import { ReactComponent as Cone } from "icons/cone.svg";
-// import { ReactComponent as Elf } from "icons/elf.svg";
-// import { ReactComponent as SnowFlake } from "icons/snowflake.svg";
-
 import style from "./Currency.module.css";
 import { classes } from "engine";
 import Events from "components/Events/Events";
 
 interface ICurrency extends HTMLAttributes<HTMLDivElement> {
+  button?: boolean;
   position: "left" | "right";
   type: "snowflake" | "elf" | "cone";
   value: number | string;
@@ -22,6 +19,7 @@ interface ICurrency extends HTMLAttributes<HTMLDivElement> {
 };
 
 const Currency: FC<ICurrency> = ({
+  button,
   position = "left",
   type = "cone",
   value,
@@ -38,14 +36,14 @@ const Currency: FC<ICurrency> = ({
       [style["Currency--right"]]: position === "right",
       [style[`Currency--size_${size}`]]: true
     })} {...prevProps}>
-      <div className={style["Currency__inner"]}>
+      <div className={style["Currency__inner"]} onClick={onClick}>
         <div className={style["Currency__icon"]}>
           {type === "snowflake" && <SnowFlake width={iconSize} height={iconSize} />}
           {type === "cone" && <Cone width={iconSize} height={iconSize} />}
           {type === "elf" && <Elf width={iconSize} height={iconSize} />}
         </div>
         <div className={style["Currency__count"]}>
-          {onClick && <Events
+          {button && onClick && <Events
             className={style["Currency__button"]}
             onClick={onClick}
           >

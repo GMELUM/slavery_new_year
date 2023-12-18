@@ -24,13 +24,6 @@ const SubAction: FC<SubAction> = () => {
   return (
     <Centered>
 
-      <Banner
-        href={"https://vk.com/app51520079#slavery"}
-        target={"_blank"}
-      >
-        <img src={"./memory.png"} />
-      </Banner>
-
       <ButtonList>
 
         {value.timestamp && <Button
@@ -49,6 +42,13 @@ const SubAction: FC<SubAction> = () => {
         ><Ads /> Ускорить</Button>}
 
       </ButtonList>
+
+      <Banner
+        href={"https://vk.com/app51520079#slavery"}
+        target={"_blank"}
+      >
+        <img src={"./memory.png"} />
+      </Banner>
 
 
     </Centered>

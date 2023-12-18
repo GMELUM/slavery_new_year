@@ -42,7 +42,12 @@ export { default as Toy18 } from "./toy/toy_18.svg";
 export { default as Toy19 } from "./toy/toy_19.svg";
 export { default as Toy20 } from "./toy/toy_20.svg";
 export { default as Toy21 } from "./toy/toy_21.svg";
+export { default as Toy22 } from "./toy/toy_22.svg";
+export { default as Toy23 } from "./toy/toy_23.svg";
+export { default as Toy24 } from "./toy/toy_24.svg";
 
-export { default as ToyStar } from "./toy/star.svg";
+export { default as Star1 } from "./toy/star_1.svg";
+export { default as Star2 } from "./toy/star_2.svg";
+
 export { default as ToyGarland1 } from "./toy/garland_1.svg";
 export { default as ToyGarland2 } from "./toy/garland_2.svg";

@@ -3,8 +3,8 @@ import { FC, HTMLAttributes } from "react";
 import style from "./Ratio.module.css";
 
 interface IRatio extends HTMLAttributes<HTMLDivElement> {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 };
 
 const Ratio: FC<IRatio> = ({
@@ -14,6 +14,11 @@ const Ratio: FC<IRatio> = ({
   className,
   ...others
 }) => {
+
+  if (!width || !height) {
+    return children
+  }
+
   return (
     <div className={style.Ratio}>
       <span className={style.Ratio_padding}

@@ -219,7 +219,25 @@ const loadData = () => new Promise<Data>((resolve) => {
         level: "Звезда",
         description: "добавляет X снежинок",
         items: [
-          { toy: "star", vote: 3 },
+          { toy: "star_1", vote: 3 },
+        ]
+      }
+    ],
+    toyCraft: [
+      {
+        level: "Звёздочки",
+        description: "добавляет X снежинок",
+        items: [
+          { toy: "toy_22", cone: 2, elf: 4 },
+          { toy: "toy_23", cone: 2, elf: 4 },
+          { toy: "toy_24", cone: 2, elf: 4 },
+        ]
+      },
+      {
+        level: "Звезда",
+        description: "добавляет X снежинок",
+        items: [
+          { toy: "star_2", cone: 3, snowflake: 3 },
         ]
       }
     ],
@@ -258,7 +276,7 @@ const loadData = () => new Promise<Data>((resolve) => {
     decorations: {
       garland: "snow",
       star: false,
-      toys: ["toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1"]
+      toys: ["toy_1", "toy_1", "toy_1", "toy_1", "toy_1", "toy_1"]
     }
   }))
 })

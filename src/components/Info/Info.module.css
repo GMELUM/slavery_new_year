@@ -1,0 +1,15 @@
+.Info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 12px;
+  background: #bce1fc;
+  margin-bottom: 12px;
+}
+
+.Info__value {
+  font-size: 12pt;
+  color: #1d4687;
+  font-weight: 700;
+}
